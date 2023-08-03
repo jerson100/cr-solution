@@ -1,0 +1,218 @@
+@font-face {
+  font-family: "Gordita Black";
+  src: url("../../fonts/Gordita Black.woff") format("woff");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Gordita Regular Italic";
+  src: url("../../fonts/Gordita Regular Italic.woff") format("woff");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Gordita Regular";
+  src: url("../../fonts/Gordita Regular.woff") format("woff");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Gordita Thin";
+  src: url("../../fonts/Gordita Thin.woff") format("woff");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Gordita Thin Italic";
+  src: url("../../fonts/Gordita Thin Italic.woff") format("woff");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Gordita Light";
+  src: url("../../fonts/Gordita Light.woff") format("woff");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Gordita Light Italic";
+  src: url("../../fonts/Gordita Light Italic.woff") format("woff");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Gordita Medium";
+  src: url("../../fonts/Gordita Medium.woff") format("woff");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Gordita Medium Italic";
+  src: url("../../fonts/Gordita Medium Italic.woff") format("woff");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Gordita Bold";
+  src: url("../../fonts/Gordita Bold.woff") format("woff");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Gordita Bold Italic";
+  src: url("../../fonts/Gordita Bold Italic.woff") format("woff");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Gordita Black";
+  src: url("../../fonts/Gordita Black.woff") format("woff");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Gordita Black Italic";
+  src: url("../../fonts/Gordita Black Italic.woff") format("woff");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Gordita Ultra";
+  src: url("../../fonts/Gordita Ultra.woff") format("woff");
+  font-weight: normal;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  --screen-top: calc(95px + 20px * 2);
+}
+
+.container {
+  max-width: 1600px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.button {
+  --txt-color: #fff026;
+  --bg-color: #1f4690;
+  display: inline-block;
+  padding: 8px 25px;
+  background-color: var(--bg-color);
+  color: var(--txt-color);
+  transition: all 250ms ease;
+  font-size: 18px;
+  font-family: "Gordita Medium", sans-serif;
+}
+
+.button:active {
+  transform: scale(1.1);
+}
+
+.button:hover {
+  --bg-color: #0097b2;
+}
+
+.screen-top {
+  margin-top: var(--screen-top);
+}
+
+.h-screen-top {
+  min-height: calc(100vh - var(--screen-top));
+}
+
+.page-section {
+  padding-top: 109px;
+  padding-bottom: 109px;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  line-height: 3.5625rem;
+  margin-bottom: 1.5rem;
+  color: #1f4690;
+  font-family: "Gordita Bold";
+}
+
+.section-text {
+  font-size: 1.5625rem;
+  line-height: 2.1875rem;
+  font-family: "Gordita Regular";
+  color: #313131;
+}
+
+.text {
+  font-size: 1.25rem;
+  line-height: 1.5625rem;
+}
+
+.header__navigation a {
+  position: relative;
+}
+
+.header__navigation a {
+  transition: transform ease 250ms;
+  display: inline-block;
+}
+
+.header__navigation a:hover {
+  transform: scale(1.2);
+  color: #0097b2;
+}
+
+.header__navigation a::before {
+  transition: backgroundColor ease 250ms, opacity ease 250ms;
+  opacity: 0;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  height: 2px;
+  background-color: #0097b2;
+}
+
+.header__navigation a:hover::before {
+  opacity: 1;
+}
+
+.main-banner {
+  background-image: url("../../images/Inicio/Bg.jpg");
+  background-size: cover;
+}
+
+.services__item {
+  cursor: pointer;
+}
+
+.services__content {
+  transition: all ease 250ms;
+}
+
+.services__item:hover .services__content {
+  height: 364px;
+}
+
+.services__item h3 {
+  transition: color esae 250ms;
+}
+
+.services__item:hover h3 {
+  color: #0097b2;
+}
+
+.services__item:hover .services__description {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.services__item .services__bg {
+  transition: backgroundColor ease 250ms;
+}
+
+.services__item:hover .services__bg {
+  background: #000000f2;
+}
