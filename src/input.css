@@ -86,6 +86,9 @@
 
 body {
   --screen-top: calc(95px + 20px * 2);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .container {
@@ -136,6 +139,10 @@ body {
   font-family: "Gordita Bold";
 }
 
+.section-title--celeste {
+  color: #0097b2;
+}
+
 .section-text {
   font-size: 1.5625rem;
   line-height: 2.1875rem;
@@ -146,6 +153,13 @@ body {
 .text {
   font-size: 1.25rem;
   line-height: 1.5625rem;
+}
+
+.card-title {
+  font-size: 1.75rem;
+  line-height: 2.5rem;
+  margin-bottom: 1rem;
+  font-family: "Gordita Bold";
 }
 
 .header__navigation a {
@@ -215,4 +229,59 @@ body {
 
 .services__item:hover .services__bg {
   background: #000000f2;
+}
+
+.main-banner #initial-top-hero img,
+.main-banner #initial-bottom-hero img {
+  opacity: 0;
+  transition: opacity ease 250ms;
+}
+
+.main-banner #initial-top-hero p,
+.main-banner #initial-bottom-hero p {
+  transition: left 250ms ease;
+}
+
+.main-banner #initial-top-hero p span,
+.main-banner #initial-bottom-hero p span {
+  display: none;
+}
+
+.main-banner #initial-top-hero p span.active,
+.main-banner #initial-bottom-hero p span.active {
+  display: inline-block;
+}
+
+.main-banner #initial-top-hero img.active,
+.main-banner #initial-top-hero p.active,
+.main-banner #initial-bottom-hero img.active,
+.main-banner #initial-bottom-hero p.active {
+  opacity: 1;
+}
+
+.button-custom {
+  background-color: #ffffff;
+  color: #0097b2;
+  font-family: "Gordita Bold";
+  font-size: 35px;
+  line-height: 50px;
+  min-width: 350px;
+  padding: 0.4rem 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.button-custom:hover .button-custom__icon {
+  transform: translateX(20px);
+}
+
+.button-custom__icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #1f4690;
+  display: inline-block;
+  transition: transform 250ms ease;
 }

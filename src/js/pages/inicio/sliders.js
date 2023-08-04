@@ -67,4 +67,37 @@ const confianNosotrosSlider = () => {
   }).mount();
 };
 
-export { serviciosSlider, blogSlider, confianNosotrosSlider };
+const capacitacionesDestacadasSlider = () => {
+  const capacitacionesDestacadasContainer = document.getElementById(
+    "capacitaciones-destacadas"
+  );
+  if (!capacitacionesDestacadasContainer) return;
+  new Splide(capacitacionesDestacadasContainer, {
+    type: "loop",
+    perPage: 2,
+    perMove: 1,
+    gap: "3rem",
+    pagination: false,
+    padding: {
+      right: "12rem",
+    },
+    breakpoints: {
+      // 1200: {
+      //   perPage: 2,
+      // },
+      768: {
+        perPage: 2,
+      },
+      576: {
+        perPage: 1,
+      },
+    },
+  }).mount();
+};
+
+export {
+  serviciosSlider,
+  blogSlider,
+  confianNosotrosSlider,
+  capacitacionesDestacadasSlider,
+};

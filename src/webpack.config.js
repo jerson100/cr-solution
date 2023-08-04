@@ -37,12 +37,22 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: "bundle.css", // Nombre del archivo CSS generado
     }),
-    new TerserPlugin(),
+    new TerserPlugin({
+      terserOptions: {
+        format: {
+          comments: false, // Elimina todos los comentarios
+        },
+      },
+    }),
   ],
   optimization: {
     minimize: true, // Habilita la minificación de JS (opcional)
     minimizer: [
-      new CssMinimizerPlugin(), // Habilita la minificación de CSS
+      new CssMinimizerPlugin({
+        minimizerOptions: {
+          preset: ["default", { discardComments: { removeAll: true } }],
+        },
+      }), // Habilita la minificación de CSS
     ],
   },
   // stats: {

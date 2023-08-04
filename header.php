@@ -37,8 +37,8 @@
             <div class="flex items-center justify-between">
                 <div class="flex items-center">
                     <!-- <div class="h-[95px] bg-blue-600 w-[200px]"></div> -->
-                    <img src="<?php echo IMG ?>/Inicio/LOGOC&R.svg"
-                        alt="Logo de Web CR Solutions" class="w-auto h-[95px]" />
+                    <img src="<?php echo IMG ?>/Inicio/LOGOC&R.svg" alt="Logo de Web CR Solutions"
+                        class="w-auto h-[95px]" />
                 </div>
                 <div>
                     <nav>
