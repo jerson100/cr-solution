@@ -22,7 +22,7 @@ get_header();
                 </h1>
                 <p class="text-[38px] font-gordita-regulartext-white-150 mb-14 text-white-150 wow animate__animated animate__fadeInLeft"
                     data-wow-duration="1s">
-                    <?php echo get_field("descr_gracias_page") ?>
+                    <?php echo get_field("description_gracias_page") ?>
                 </p>
                 <div class="flex justify-center mb-14">
                     <button class="button">Volver al inicio</button>
