@@ -131,6 +131,11 @@ body {
   padding-bottom: 109px;
 }
 
+.page-section--sm {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
 .section-title {
   font-size: 2.5rem;
   line-height: 3.5625rem;
@@ -139,8 +144,20 @@ body {
   font-family: "Gordita Bold";
 }
 
+.section-title--m2 {
+  margin-bottom: 5rem;
+}
+
 .section-title--celeste {
   color: #0097b2;
+}
+
+.section-title--white {
+  color: #ffffff;
+}
+
+.section-title--yellow {
+  color: #fff026;
 }
 
 .section-text {
@@ -152,7 +169,22 @@ body {
 
 .text {
   font-size: 1.25rem;
-  line-height: 1.5625rem;
+  line-height: 2.063rem;
+}
+
+.text-25 {
+  font-size: 1.563rem;
+  line-height: 2.188rem;
+}
+
+.text-30 {
+  font-size: 1.875rem;
+  line-height: 2.688rem;
+}
+
+.text-50 {
+  font-size: 3.125rem;
+  line-height: 4.5rem;
 }
 
 .card-title {
@@ -284,4 +316,35 @@ body {
   background-color: #1f4690;
   display: inline-block;
   transition: transform 250ms ease;
+}
+
+.content-editor h2 {
+  font-size: 2.5rem;
+  line-height: 3.5625rem;
+  margin-bottom: 1.5rem;
+  color: #1f4690;
+  font-family: "Gordita Bold";
+  margin-bottom: 1.6rem;
+}
+
+.content-editor h3 {
+  font-size: 1.75rem;
+  line-height: 2.5rem;
+  margin-bottom: 1rem;
+  font-family: "Gordita Bold";
+  color: #1f4690;
+  margin-bottom: 1.4rem;
+}
+
+.content-editor p {
+  font-size: 1.5625rem;
+  line-height: 2.1875rem;
+  font-family: "Gordita Regular";
+  color: #313131;
+  margin-bottom: 1.5rem;
+}
+
+.content-editor b {
+  font-family: "Gordita Bold";
+  color: #1f4690;
 }
