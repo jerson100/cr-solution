@@ -225,7 +225,7 @@ body {
 }
 
 .main-banner {
-  background-image: url("../../images/Inicio/Bg.jpg");
+  /* background-image: url("../../images/Inicio/Bg.jpg"); */
   background-size: cover;
 }
 
@@ -347,4 +347,11 @@ body {
 .content-editor b {
   font-family: "Gordita Bold";
   color: #1f4690;
+}
+
+/*
+    Pagina de servicios
+*/
+.services_list li:nth-child(1) {
+  grid-column: 2 / span 2;
 }

@@ -3,7 +3,7 @@
         <div class="flex flex-col">
             <h2 class="section-title text-center w-full">
                 <!-- Empresas que confían en nosotros: -->
-                <?php echo get_field("confian_nosotros_titulo", "option") ?>
+                <?php echo get_field("titulo_confian_nosotros", "option") ?>
             </h2>
             <div class="relative">
                 <div
@@ -16,8 +16,8 @@
                     <div class="splide__track">
                         <ul class="splide__list">
                             <?php
-                            if (have_rows("empresas_confian_nosotros", "option")):
-                                while (have_rows("empresas_confian_nosotros", "option")):
+                            if (have_rows("clientes_confian_nosotros", "option")):
+                                while (have_rows("clientes_confian_nosotros", "option")):
                                     the_row(); ?>
                                     <li class="splide__slide">
                                         <img src="<?php echo get_sub_field("logo")["url"] ?>"

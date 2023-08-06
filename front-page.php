@@ -6,7 +6,8 @@
 get_header();
 ?>
 
-<div class="main-banner bg-opacity-25 screen-top h-screen-top">
+<div class="main-banner bg-opacity-25 screen-top h-screen-top"
+    style="background-image:url(<?php echo get_field("fondo_hero")["url"] ?>);">
     <div class="container min-h-[inherit]">
         <div class="grid grid-cols-2 py-10 min-h-[inherit]">
             <div class="flex items-center">

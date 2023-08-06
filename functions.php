@@ -188,3 +188,4 @@ if (function_exists('acf_add_options_page')) {
 require_once get_template_directory() . '/inc/modulo_informacion.php';
 require_once get_template_directory() . '/inc/productos.php';
 require_once get_template_directory() . '/inc/servicios.php';
+require_once get_template_directory() . '/inc/blog.php';
