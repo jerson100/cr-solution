@@ -172,6 +172,11 @@ body {
   line-height: 2.063rem;
 }
 
+.text-22 {
+  font-size: 1.375rem;
+  line-height: 1.75rem;
+}
+
 .text-25 {
   font-size: 1.563rem;
   line-height: 2.188rem;
@@ -303,6 +308,15 @@ body {
   justify-content: center;
   gap: 0.5rem;
   align-items: center;
+}
+
+.button--rounded-md {
+  border-radius: 0.75rem;
+}
+
+.button-size-md {
+  font-size: 1.563rem;
+  line-height: 2.1875rem;
 }
 
 .button-custom:hover .button-custom__icon {

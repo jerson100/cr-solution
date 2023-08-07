@@ -184,6 +184,7 @@ if (function_exists('acf_add_options_page')) {
 }
 
 
+
 //modulo de redes - get option
 require_once get_template_directory() . '/inc/modulo_informacion.php';
 require_once get_template_directory() . '/inc/productos.php';
