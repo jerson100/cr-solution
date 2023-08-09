@@ -14,7 +14,7 @@ get_header();
         class="w-full h-full object-cover absolute left-0 top-0 z-[1]" />
     <div class="container">
         <div class="max-w-[85%] w-full min-h-[264px] py-12 flex items-center justify-start">
-            <h1 class="section-title section-title--white z-[2] relative text-white-150">
+            <h1 class="section-title section-title--xl section-title--white z-[2] relative text-white-150">
                 <?php echo get_field("titulo_pagina_servicios") ?>
             </h1>
         </div>

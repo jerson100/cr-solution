@@ -74,8 +74,12 @@ $ID = intval(get_the_ID());
             <?php if ($anterior_entrada): ?>
                 <a href=" <?php echo get_permalink($anterior_entrada) ?>" class="button">Entrada Anterior</a>
             <?php endif; ?>
-            <a href="<?php echo get_post_type_archive_link('blog') ?>"
-                class="text-celeste-50 font-gordita-regular text-25">Volver al blog</a>
+
+            <a href="<?php
+            $page = get_page_by_title('Blogs');
+            $page_url = get_permalink($page->ID);
+            echo $page_url = get_permalink($page->ID); ?>" class="text-celeste-50 font-gordita-regular text-25">Volver
+                al blog</a>
             <?php if ($siguiente_entrada): ?>
                 <a href="<?php echo get_permalink($siguiente_entrada) ?>" class="button">Siguiente Entrada</a>
             <?php endif; ?>
