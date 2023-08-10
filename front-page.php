@@ -119,7 +119,7 @@ $wp_query = new WP_Query(
                 <!-- <div
                 id="servicios"
                 class="grid grid-cols-4 gap-10 [&>div>div>p]:text-[20px] [&>article]:h-[364px] [&>article>img]:h-full [&>article>img]:w-full [&>article>img]:object-cover [&>article>img]:object-top [&>article]:rounded-xl [&>article]:overflow-hidden [&>article]:shadow-custom [&>article>div]:absolute [&>article>div]:bottom-0 [&>article]:relative services"> -->
-                <div class="splide" aria-label="Servicios" id="servicios">
+                <div class="splide custom-splide" aria-label="Servicios" id="servicios">
                     <div class="splide__track">
                         <ul class="splide__list">
                             <?php while (have_posts()):
@@ -138,7 +138,8 @@ $wp_query = new WP_Query(
                                             </div>
                                             <div class="relative z-[1]">
                                                 <div class="flex items-center justify-center">
-                                                    <h3 class="text-white font-gordita-bold text text-center line-clamp-3">
+                                                    <h3
+                                                        class="text-white font-gordita-bold text-center line-clamp-3 text-[20px] leading-[25px]">
                                                         <?php echo get_the_title(); ?>
                                                     </h3>
                                                 </div>
@@ -181,7 +182,7 @@ $wp_query = new WP_Query(
             </div>
             <div
                 class="overflow-x-hidden [&>div>div>ul>li>article>img]:w-full [&>div>div>ul>li]:rounded-md [&>div>div>ul>li>article>img]:rounded-md [&>div>div>ul>li>article>img]:object-cover [&>div>div>ul>li>article>img]:h-[250px]">
-                <div class="splide" id="capacitaciones-destacadas">
+                <div class="splide custom-splide" id="capacitaciones-destacadas">
                     <div class="splide__track">
                         <ul class="splide__list">
                             <li class="splide__slide">
@@ -335,46 +336,71 @@ $wp_query = new WP_Query(
                 te abrirá las puertas hacia un futuro laboral más seguro y exitoso.
             </p>
         </div>
-        <div class="splide" id="blog-slider">
+        <div class="splide custom-splide" id="blog-slider">
             <div class="splide__track">
                 <ul class="splide__list">
                     <?php
+                    global $wp_query;
+                    $wp_query = new WP_Query(
+                        array(
+                            'post_type' => 'blog',
+                            'posts_per_page' => 10,
+                            'post_status' => 'publish'
+                        )
+                    );
+                    ?>
+                    <?php
                     $i = 1;
-                    while ($i++ <= 5) { ?>
-                        <li class="splide__slide">
-                            <article class="shadow-custom m-[.2rem]">
-                                <div class="relative">
-                                    <ul class="absolute left-0 top-2">
-                                        <span>+</span>
-                                        <span>-</span>
-                                    </ul>
-                                    <img src="/cr_solutions/wp-content/themes/theme_invitro/images/Inicio/hombre-vista-posterior-equipo-seguridad.jpg"
-                                        alt="" class="w-full h-[317px] object-cover object-center" />
-                                </div>
-                                <div class="p-4">
-                                    <h3 class="text-celeste-50 line-clamp-1 card-title">Lorem ipsum
-                                        dolor</h3>
-                                    <p class="line-clamp-2 mb-5 text">
-                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                                        Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
-                                        natoque penatibus et magnis dis parturient montes, nascetur
-                                        ridiculus mus. Donec quam felis, ultricies nec, pellentesque
-                                        eu, pretium quis, sem. Nulla consequat massa quis enim. Donec
-                                        pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
-                                        In enim jus
-                                    </p>
-                                    <div class="bg-[#1F4690] h-[1px] w-full mb-4"></div>
-                                    <a href="#" class="button">Ver más</a>
-                                </div>
-                            </article>
-                        </li>
-                    <?php } ?>
+                    if (have_posts()):
+                        while (have_posts()):
+                            the_post(); ?>
+                            <li class="splide__slide">
+                                <article class="shadow-custom m-[.2rem]">
+                                    <div class="relative">
+                                        <ul class="absolute left-0 top-2">
+                                            <span>+</span>
+                                            <span>-</span>
+                                        </ul>
+                                        <div
+                                            class="w-full h-[317px] relative [&>img]:object-cover [&>img]:object-center [&>img]:absolute [&>img]:left-0 [&>img]:right-0 [&>img]:w-full [&>img]:h-full">
+                                            <?php if (has_post_thumbnail()): ?>
+                                                <?php echo get_the_post_thumbnail() ?>
+                                            <?php endif; ?>
+                                        </div>
+                                        <!-- <img src="/cr_solutions/wp-content/themes/theme_invitro/images/Inicio/hombre-vista-posterior-equipo-seguridad.jpg"
+                                            alt="" class=" " /> -->
+                                    </div>
+                                    <div class="p-4">
+                                        <h3 class="text-celeste-50 line-clamp-1 card-title">
+                                            <?php echo the_title() ?>
+                                        </h3>
+                                        <p class="line-clamp-2 mb-5 text">
+                                            <?php echo wp_trim_words(get_the_excerpt(), 50) ?>
+                                        </p>
+                                        <div class="bg-[#1F4690] h-[1px] w-full mb-4"></div>
+                                        <a href="<?php echo the_permalink() ?>" class="button">Ver más</a>
+                                    </div>
+                                </article>
+                            </li>
+                        <?php endwhile; endif; ?>
                 </ul>
             </div>
         </div>
     </div>
 </section>
 
+<div class="modal" data-modal-id="1" id="modal-inicio">
+    <div class="modal__container">
+        <div class="modal__wrapper">
+            <div class="modal__content">
+                <div class="modal__close">x</div>
+                <div class="modal__body">
+                    <img src="<?php echo IMG ?>/Inicio/hombre-vista-posterior-equipo-seguridad.jpg" alt="" title="" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <?php //get_template_part('inc/section');?>
 

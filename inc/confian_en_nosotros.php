@@ -12,7 +12,7 @@
                 <div
                     class="absolute z-[2] right-0 top-1/2 -translate-y-1/2 h-full w-[200px] bg-gradient-to-l from-[18%] from-white to-transparent">
                 </div>
-                <div class="splide z-[1]" id="confianNosotros">
+                <div class="splide custom-splide custom-splide--dark z-[1]" id="confianNosotros">
                     <div class="splide__track">
                         <ul class="splide__list">
                             <?php

@@ -115,14 +115,14 @@ if (!function_exists('general_scripts')):
 
         // wp_register_script('splidejs', get_template_directory_uri().'/libraries/js/splide.min.js',array(),'1.0.0',true);
         // wp_register_script('splideautoscrolljs', get_template_directory_uri().'/libraries/js/splide-extension-auto-scroll.min.js',array(),'1.0.0',true);
-        wp_register_script('mainjs', get_template_directory_uri() . '/public/js/main.min.js', array(), '1.0.0', true);
-        wp_register_script('stepjs', get_template_directory_uri() . '/cart/step.js', array('jquery'), '1.0.0', true);
+        // wp_register_script('mainjs', get_template_directory_uri() . '/public/js/main.min.js', array(), '1.0.0', true);
+        // wp_register_script('stepjs', get_template_directory_uri() . '/cart/step.js', array('jquery'), '1.0.0', true);
         wp_register_script('bundlejs', get_template_directory_uri() . '/dist/bundle.js', array(), '1.0.0', true);
 
         // wp_enqueue_script('splidejs');
-        wp_enqueue_script('stepjs');
+        // wp_enqueue_script('stepjs');
         // wp_enqueue_script('splideautoscrolljs');
-        wp_enqueue_script('mainjs');
+        // wp_enqueue_script('mainjs');
         wp_enqueue_script('bundlejs');
     }
 endif;
@@ -194,6 +194,6 @@ if (function_exists('acf_add_options_page')) {
 
 //modulo de redes - get option
 require_once get_template_directory() . '/inc/modulo_informacion.php';
-require_once get_template_directory() . '/inc/productos.php';
+// require_once get_template_directory() . '/inc/productos.php';
 require_once get_template_directory() . '/inc/servicios.php';
 require_once get_template_directory() . '/inc/blog.php';

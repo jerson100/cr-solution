@@ -41,25 +41,30 @@
                         class="w-auto h-[95px]" />
                 </div>
                 <div>
-                    <nav>
-                        <ul class="flex gap-[93px] [&>li>a]:text-blue header__navigation [&>li>a]:font-gordita-medium">
+                    <nav class="header__nav">
+                        <ul
+                            class="flex gap-[93px] [&>li>a]:text-blue header__navigation [&>li>a]:font-gordita-medium items-center">
                             <li>
-                                <a href="#" class="section-text">Inicio</a>
+                                <a href="<?php echo home_url('/'); ?>" class="section-text header__link">Inicio</a>
                             </li>
                             <li>
-                                <a href="#" class="section-text">Nosotros</a>
+                                <a href="<?php echo home_url('/quienes-somos'); ?>"
+                                    class="section-text header__link">Nosotros</a>
                             </li>
                             <li>
-                                <a href="#" class="section-text">Servicios</a>
+                                <a href="<?php echo home_url('/servicios'); ?>"
+                                    class="section-text header__link">Servicios</a>
                             </li>
                             <li>
-                                <a href="#" class="section-text">Blog</a>
+                                <a href="<?php echo home_url('/blogs'); ?>" class="section-text header__link">Blog</a>
                             </li>
                             <li>
-                                <a href="#" class="section-text">Verifica aquí</a>
+                                <a href="<?php echo home_url('/verificacion'); ?>"
+                                    class="section-text header__link">Verifica aquí</a>
                             </li>
                             <li>
-                                <a href="#" class="section-text">Contacto</a>
+                                <a href="<?php echo home_url('/contacto'); ?>"
+                                    class="section-text button button--celeste button--variant-2 button--rounded-xs ">Contacto</a>
                             </li>
                         </ul>
                     </nav>

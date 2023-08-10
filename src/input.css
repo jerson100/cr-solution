@@ -85,10 +85,74 @@
 @tailwind utilities;
 
 body {
+  --c-celeste-50: "#0097B27D";
+  --c-celeste-100: "#0097B2";
   --screen-top: calc(95px + 20px * 2);
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+}
+
+.services__item {
+  cursor: pointer;
+}
+
+.services__content {
+  transition: all ease 250ms;
+}
+
+.services__item:hover .services__content {
+  height: 364px;
+}
+
+.services__item h3 {
+  transition: color esae 250ms;
+}
+
+.services__item:hover h3 {
+  color: #0097b2;
+}
+
+.services__item:hover .services__description {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.services__item .services__bg {
+  transition: backgroundColor ease 250ms;
+}
+
+.services__item:hover .services__bg {
+  background: #000000f2;
+}
+
+.main-banner #initial-top-hero img,
+.main-banner #initial-bottom-hero img {
+  opacity: 0;
+  transition: opacity ease 250ms;
+}
+
+.main-banner #initial-top-hero p,
+.main-banner #initial-bottom-hero p {
+  transition: left 250ms ease;
+}
+
+.main-banner #initial-top-hero p span,
+.main-banner #initial-bottom-hero p span {
+  display: none;
+}
+
+.main-banner #initial-top-hero p span.active,
+.main-banner #initial-bottom-hero p span.active {
+  display: inline-block;
+}
+
+.main-banner #initial-top-hero img.active,
+.main-banner #initial-top-hero p.active,
+.main-banner #initial-bottom-hero img.active,
+.main-banner #initial-bottom-hero p.active {
+  opacity: 1;
 }
 
 .container {
@@ -112,6 +176,27 @@ body {
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.button::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #0097b2;
+  transform: scale(0);
+  transform-origin: right top;
+  transition: all 250ms ease;
+  z-index: -1;
+}
+
+.button:hover::before {
+  transform: scale(1);
 }
 
 .button--celeste {
@@ -127,8 +212,48 @@ body {
   border-radius: 10px;
 }
 
-.button:hover {
-  --bg-color: #0097b2;
+.button--celeste {
+  /* background-color: #0097b2;
+  border: solid 1px #0097b2; */
+  /* color: #fff; */
+}
+
+/*
+  button variants
+*/
+
+.button--variant-2 {
+  background-color: transparent;
+}
+
+.button--variant-2::before {
+  transform: scale(1);
+  transform-origin: left center;
+  transition: all 250ms ease;
+  left: 0;
+  top: 0;
+}
+
+.button--variant-2.button--celeste::before {
+  background-color: #0097b2;
+  border: solid 1px #0097b2;
+}
+
+.button--variant-2.button--celeste {
+  border: solid 1px #0097b2;
+}
+
+.button--variant-2.button--celeste:hover::before {
+  left: 100%;
+}
+
+.button--variant-2.button--celeste {
+  color: #fff;
+  /* background-color: #fff; */
+}
+
+.button--variant-2.button--celeste:hover {
+  color: #0097b2;
 }
 
 .screen-top {
@@ -243,6 +368,10 @@ body {
   border-radius: 0.75rem;
 }
 
+.button--rounded-xs {
+  border-radius: 0.3125rem;
+}
+
 .button-size-md {
   font-size: 1.563rem;
   line-height: 2.1875rem;
@@ -281,4 +410,194 @@ body {
 .content-editor b {
   font-family: "Gordita Bold";
   color: #1f4690;
+}
+
+/*
+  Modals
+*/
+
+.modal {
+  --w-modal: 550px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: #313131bf;
+  justify-content: center;
+  display: none;
+  z-index: 10000;
+  height: 100vh;
+  overflow: auto;
+}
+
+.modal__container {
+  margin-inline: auto;
+  max-width: var(--w-modal);
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.modal__wrapper {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  width: 100%;
+  margin: auto;
+  position: relative;
+}
+
+.modal--open {
+  display: block;
+}
+
+.modal--xs {
+  --w-modal: 350px;
+}
+.modal--sm {
+  --w-modal: 550px;
+}
+.modal--md {
+  --w-modal: 750px;
+}
+.modal--lg {
+  --w-modal: 1024px;
+}
+.modal--xl {
+  --w-modal: 1340px;
+}
+.modal--full {
+  --w-modal: 100%;
+}
+
+.modal__content {
+  border-radius: 0.75rem;
+  position: relative;
+  background-color: #fff;
+}
+
+/* .modal__body {
+}
+
+.modal__footer {
+} */
+
+.modal__close {
+  background-color: #8e8e8e;
+  color: #d8d8d8;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  transform: translate(50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  cursor: pointer;
+  font-family: "Gordita Bold";
+}
+
+.modal__close--celeste {
+  background-color: #0097b2;
+  color: #ffffff;
+}
+
+.modal-plantillas-form input::placeholder {
+  color: var(--c-celeste-100);
+  font-family: "Gordita Regular";
+  font-size: 18px;
+}
+
+.dowmload-svg path {
+  transition: all 250ms ease;
+}
+
+.dowmload-button svg path:hover {
+  fill: #8e8e8e;
+}
+
+/*
+  Header
+*/
+
+.header__link {
+  position: relative;
+  min-width: 160px;
+}
+
+.header__link:hover {
+  color: rgba(0, 151, 178, 1);
+  /* font-family: "Gordita Bold"; */
+}
+
+.header__link::before {
+  content: "";
+  width: 100%;
+  height: 3px;
+  position: absolute;
+  top: calc(100% + 0.25rem);
+  background-color: #0097b2;
+  opacity: 0;
+  transition: opacity 250ms ease;
+}
+
+.header__link:hover::before {
+  opacity: 1;
+}
+
+.custom-splide {
+}
+
+.custom-splide .splide__arrows button:first-child {
+  transform: translateX(-60px);
+}
+
+.custom-splide .splide__arrows button:last-child {
+  transform: translateX(60px);
+}
+
+.custom-splide .splide__arrows button {
+  background-color: #1f4690;
+}
+
+.custom-splide--dark .splide__arrows button {
+  background-color: #8e8e8e;
+}
+
+/*
+    Pagina de servicios
+*/
+.services_list li:nth-child(1) {
+  grid-column: 2 / span 2;
+}
+
+.custom-splide .splide__arrows button svg {
+  fill: white;
+}
+
+.verification__description {
+  font-family: "Gordita Regular";
+  font-size: 25px;
+  color: #ffffff;
+}
+
+.verification__description p {
+  margin-bottom: 1rem;
+  font-size: 25px;
+  line-height: 35px;
+}
+
+.verification__description ul li {
+  list-style: disc;
+  margin-left: 20px;
+  font-size: 22px;
+  line-height: 30px;
+  font-family: "Gordita Regular";
+}
+
+.verification__description ul li::marker {
+  color: #fff026;
 }

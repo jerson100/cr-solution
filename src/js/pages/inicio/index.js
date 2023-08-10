@@ -1,4 +1,5 @@
 import { heroSlider } from "./hero";
+import { modalInicio } from "./modal";
 import {
   serviciosSlider,
   blogSlider,
@@ -12,6 +13,7 @@ const init = () => {
   confianNosotrosSlider();
   capacitacionesDestacadasSlider();
   heroSlider(5000);
+  modalInicio(3000);
 };
 
 export default init;

@@ -74,11 +74,82 @@ get_header();
                             </h3>
                             <div class="flex gap-6 flex-shrink-0">
                                 <button data-title="<?php echo get_sub_field("titulo") ?>" class="flex-shrink-0">
-                                    <img src="<?php echo IMG ?>/Plantillas/bookmarks.svg" />
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="34.148" height="46.345"
+                                        viewBox="0 0 34.148 46.345">
+                                        <path id="bookmark_save_storage_basic_icon_192482"
+                                            d="M50.928,13H19.22A1.22,1.22,0,0,0,18,14.22v43.9a1.215,1.215,0,0,0,2.049.89L35.074,45.148,50.1,59.014a1.22,1.22,0,0,0,.829.329,1.341,1.341,0,0,0,.488-.1,1.22,1.22,0,0,0,.732-1.122V14.22A1.22,1.22,0,0,0,50.928,13Zm-1.22,42.343L35.9,42.6a1.22,1.22,0,0,0-1.659,0L20.439,55.343v-39.9h29.27Z"
+                                            transform="translate(-18 -13)" fill="#0097b2" />
+                                    </svg>
                                 </button>
-                                <button class="flex-shrink-0">
-                                    <img src="<?php echo IMG ?>/Plantillas/downloade.svg" />
+                                <button class="flex-shrink-0 .dowmload-button"
+                                    data-modal-target="<?php echo get_sub_field("titulo") ?>">
+                                    <svg id="Componente_10_1" data-name="Componente 10 – 1" xmlns="http://www.w3.org/2000/svg"
+                                        width="48.291" height="46.345" viewBox="0 0 48.291 46.345">
+                                        <path id="Trazado_9" data-name="Trazado 9"
+                                            d="M44.717,59.2a2.03,2.03,0,0,0,2.032-2.032V44.591h4.842V57.474a6.568,6.568,0,0,1-6.571,6.571H9.871A6.568,6.568,0,0,1,3.3,57.474V44.591H8.142V57.171A2.03,2.03,0,0,0,10.174,59.2Zm-26.8-41.5H36.892V34.69h7.263L27.424,51.032,10.693,34.69h7.263V17.7Z"
+                                            transform="translate(-3.3 -17.7)" fill="#1f4690" />
+                                    </svg>
                                 </button>
+                            </div>
+                        </div>
+                        <div class="modal modal--xl" data-modal-id="<?php echo get_sub_field("titulo") ?>">
+                            <div class="modal__container">
+                                <div class="modal__wrapper">
+                                    <div class="modal__content">
+                                        <div class="modal__close modal__close--celeste">x</div>
+                                        <div class="modal__body px-[72px] py-[71px]">
+                                            <div class="grid grid-cols-2 gap-[103px]">
+                                                <div>
+                                                    <h2 class="font-gordita-bold text-blue text-30 mb-10">¿Quieres llevar la
+                                                        eficiencia de
+                                                        tu trabajo en SST al siguiente nivel?</h2>
+                                                    <p class="text-20 font-gordita-regular text-text-primary mb-8">Estamos
+                                                        encantados de ofrecerles
+                                                        plantillas gratuitas
+                                                        descargables, como una
+                                                        forma de complementar y facilitar su arduo trabajo diario.</p>
+                                                    <p class="text-20 font-gordita-regular text-text-primary mb-8">Sabemos lo
+                                                        importante que es para usted realizar una supervisión efectiva y
+                                                        eficiente,
+                                                        por lo que hemos diseñado estas plantillas con el objetivo de ahorrarte
+                                                        tiempo y esfuerzo.</p>
+                                                    <p class="text-20 font-gordita-regular text-text-primary mb-8">Sólo debes
+                                                        llenar el siguiente
+                                                        formulario con tus datos
+                                                        personales para poder mantenerte informado en materia de SST, nuevas
+                                                        actualizaciones y sobre nuestros cursos que te ayudarán a enriquecer tus
+                                                        conocimientos.</p>
+                                                    <p class="font-gordita-medium text-20 text-text-primary mb-8">¡Es un placer
+                                                        tenerte
+                                                        como parte de
+                                                        nuestra comunidad de
+                                                        profesionales comprometidos con la seguridad laboral!</p>
+                                                    </p>
+                                                </div>
+                                                <div class="shadow-custom bg-[#D9D9D9] p-10 rounded-[10px]">
+                                                    <div class="bg-[#8E8E8E] rounded-[15px] h-[247px] mb-6 shadow-custom"></div>
+                                                    <h2 class="font-gordita-bold text-20 text-blue mb-6">Nombre de la plantilla
+                                                    </h2>
+                                                    <form action="" class="grid grid-rows-3 gap-4 modal-plantillas-form">
+                                                        <input
+                                                            class="px-6 py-3 w-full rounded-[10px] text-celeste-100 text-18 font-gordita-regular bg-white"
+                                                            placeholder="Nombres y Apellidos" />
+                                                        <input
+                                                            class="px-6 py-3 w-full rounded-[10px] text-celeste-100 text-18 font-gordita-regular bg-white"
+                                                            placeholder="Correo Electrónico" />
+                                                        <input
+                                                            class="px-6 py-3 w-full rounded-[10px] text-celeste-100 text-18 font-gordita-regular bg-white"
+                                                            placeholder="Número de celular" />
+                                                        <div class="flex justify-center mt-4">
+                                                            <button type="submit" class="button">Descargar Plantilla
+                                                                Gratis</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </li>

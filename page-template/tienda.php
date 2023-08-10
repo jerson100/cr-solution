@@ -168,7 +168,8 @@ get_header();
 <section class="bg-[#D9D9D9] page-section page-section--sm">
     <div class="container">
         <h2 class="text-blue font-gordita-bold text-30 mb-10">Puede que también te interese</h2>
-        <div class="splide" role="group" aria-label="Splide Basic HTML Example" id="splide-mas-plantillas">
+        <div class="splide custom-splide" role="group" aria-label="Splide Basic HTML Example"
+            id="splide-mas-plantillas">
             <div class="splide__track">
                 <ul class="splide__list">
                     <?php
@@ -180,9 +181,13 @@ get_header();
                                 class="bg-[#313131] mx-[.3rem] mb-[.4rem] w-full h-[266px] relative rounded-[10px] shadow-custom">
                                 <div
                                     class="absolute bottom-0 left-0 w-full bg-white-150 flex justify-center px-4 py-4 rounded-[10px] shadow-custom">
-                                    <div class="flex gap-3">
-                                        <div class="w-[20px] h-[20px] bg-black"></div>
-                                        <div class="w-[20px] h-[20px] bg-black"></div>
+                                    <div class="flex gap-4">
+                                        <button>
+                                            <img src="<?php echo IMG ?>/Plantillas/bookmarks.svg" class="h-[24px]" />
+                                        </button>
+                                        <button>
+                                            <img src="<?php echo IMG ?>/Plantillas/downloade.svg" class="h-[24px]" />
+                                        </button>
                                     </div>
                                 </div>
                             </div>

@@ -94,7 +94,8 @@ get_header();
                                     </div>
                                     <div class="relative z-[1]">
                                         <div class="flex items-center justify-center">
-                                            <h3 class="text-white font-gordita-bold text text-center line-clamp-3">
+                                            <h3
+                                                class="text-white font-gordita-bold text-[20px] leading-[25px] text-center line-clamp-3">
                                                 <?php echo get_the_title(); ?>
                                             </h3>
                                         </div>
