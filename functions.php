@@ -162,13 +162,6 @@ if (function_exists('acf_add_options_page')) {
     );
     acf_add_options_sub_page(
         array(
-            'page_title' => '¿Quienes somos?',
-            'menu_title' => 'Quienes somos',
-            'parent_slug' => 'theme-general-settings'
-        )
-    );
-    acf_add_options_sub_page(
-        array(
             'page_title' => 'Confian en nosotros',
             'menu_title' => 'Confian en nosotros',
             'parent_slug' => 'theme-general-settings'
@@ -196,4 +189,5 @@ if (function_exists('acf_add_options_page')) {
 require_once get_template_directory() . '/inc/modulo_informacion.php';
 // require_once get_template_directory() . '/inc/productos.php';
 require_once get_template_directory() . '/inc/servicios.php';
+require_once get_template_directory() . '/inc/plantillas.php';
 //require_once get_template_directory() . '/inc/blog.php';

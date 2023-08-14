@@ -4,11 +4,7 @@ get_header();
 ?>
 
 <div class="screen-top relative">
-    <img src="<?php echo get_field("fondo_pagina_plantillas")["url"] ?>"
-        alt="<?php echo get_field("fondo_pagina_plantillas")["alt"] ?>"
-        width="<?php echo get_field("fondo_pagina_plantillas")["width"] ?>"
-        height="<?php echo get_field("fondo_pagina_plantillas")["height"] ?>"
-        class="w-full h-full object-cover absolute left-0 top-0 z-[1]" />
+    <img src="<?php echo get_field("fondo_pagina_plantillas")["url"] ?>" alt="<?php echo get_field("fondo_pagina_plantillas")["alt"] ?>" width="<?php echo get_field("fondo_pagina_plantillas")["width"] ?>" height="<?php echo get_field("fondo_pagina_plantillas")["height"] ?>" class="w-full h-full object-cover absolute left-0 top-0 z-[1]" />
     <div class="container">
         <div class="max-w-[85%] w-full min-h-[264px] py-12 flex items-center justify-start">
             <h1 class="section-title section-title--white z-[2] relative text-white-150">
@@ -18,81 +14,68 @@ get_header();
     </div>
 </div>
 
-<section class="page-section">
-    <div class="container">
-        <div class="mb-14">
-            <h2 class="section-title text-center max-w-[850px] mx-auto">
-                <?php echo get_field("titulo_seccion_plantillas_page") ?>
-            </h2>
-            <p class="text-25 font-gordita-regular text-center text-text-primary">
-                <?php echo get_field("descripcion_seccion_plantillas_page") ?>
-            </p>
-        </div>
-        <div class="flex bg-[#F2F2F2] px-20 py-3 mb-14">
-            <div><button class="button button--rounded-md button-size-md">Todos</button></div>
-            <ul class="flex items-center flex-wrap gap-y-4 justify-center">
-                <li>
-                    <button class="text-celeste-100 text-25 font-gordita-regular py-[8px] px-[25px]">Análisis de trabajo
-                        seguro</button>
-                </li>
-                <li>
-                    <button class="text-celeste-100 text-25 font-gordita-regular py-[8px] px-[25px]">Permisos de
-                        Trabajo</button>
-                </li>
-                <li>
-                    <button class="text-celeste-100 text-25 font-gordita-regular py-[8px] px-[25px]">Inspección de
-                        herramientas y
-                        materiales</button>
-                </li>
-                <li>
-                    <button class="text-celeste-100 text-25 font-gordita-regular py-[8px] px-[25px]">Inspección de
-                        equipos</button>
-                </li>
-                <li>
-                    <button class="text-celeste-100 text-25 font-gordita-regular py-[8px] px-[25px]">Registros de
-                        SST</button>
-                </li>
-                <li>
-                    <button class="text-celeste-100 text-25 font-gordita-regular py-[8px] px-[25px]">Tarjetas de
-                        inspección</button>
-                </li>
-            </ul>
-        </div>
-        <ul class="grid grid-cols-3 gap-10">
-            <?php
-            if (have_rows("plantillas_pagina_plantillas")):
-                while (have_rows("plantillas_pagina_plantillas")):
-                    the_row();
-                    ?>
-                    <li data-category="<?php echo get_sub_field("categoria_de_plantilla") ?>"
-                        class="rounded-lg bg-[#313131] flex flex-col">
+<?php
+global $wp_query;
+$taxonomy = 'plantilla';
+
+$wp_query = new WP_Query(
+    array(
+        'post_type' => $taxonomy,
+        'posts_per_page' => 100,
+        'post_status' => 'publish'
+    )
+);
+
+$terms = get_terms($taxonomy . 'sgenero');
+//var_dump($terms);
+
+?>
+
+<?php if (have_posts()) : ?>
+    <section class="page-section">
+        <div class="container">
+            <div class="mb-14">
+                <h2 class="section-title text-center max-w-[850px] mx-auto">
+                    <?php echo get_field("titulo_seccion_plantillas_page") ?>
+                </h2>
+                <p class="text-25 font-gordita-regular text-center text-text-primary">
+                    <?php echo get_field("descripcion_seccion_plantillas_page") ?>
+                </p>
+            </div>
+            <?php if (!empty($terms) && !is_wp_error($terms)) : ?>
+                <div class="flex bg-[#F2F2F2] px-20 py-3 mb-14">
+                    <ul class="flex items-center flex-wrap gap-y-4 justify-center">
+                        <a href="<?php echo esc_url(home_url('plantillas')) ?>" class="button button--rounded-md button-size-md">Todos</a>
+                        <?php foreach ($terms as $term) : ?>
+                            <li>
+                                <a href="<?php echo get_term_link($term); ?>" class="text-celeste-100 text-25 font-gordita-regular py-[8px] px-[25px]"><?php echo $term->name; ?></a>
+                            </li>
+                        <?php endforeach; ?>
+                    </ul>
+                </div>
+            <?php endif; ?>
+            <ul class="grid grid-cols-3 gap-10">
+                <?php while (have_posts()) : the_post(); ?>
+                    <li data-category="<?php echo get_sub_field("categoria_de_plantilla") ?>" class="rounded-lg bg-[#313131] flex flex-col">
                         <div class="h-[264px] rounded-t-lg"></div>
-                        <div
-                            class="flex justify-between items-center gap-4 shadow-custom px-8 py-4 rounded-lg bg-white-150 flex-grow">
+                        <div class="flex justify-between items-center gap-4 shadow-custom px-8 py-4 rounded-lg bg-white-150 flex-grow">
                             <h3 class="font-gordita-bold flex-shrink text-22 line-clamp-2">
-                                <?php echo get_sub_field("titulo") ?>
+                                <?php echo get_the_title(); ?>
                             </h3>
                             <div class="flex gap-6 flex-shrink-0">
-                                <button data-title="<?php echo get_sub_field("titulo") ?>" class="flex-shrink-0">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="34.148" height="46.345"
-                                        viewBox="0 0 34.148 46.345">
-                                        <path id="bookmark_save_storage_basic_icon_192482"
-                                            d="M50.928,13H19.22A1.22,1.22,0,0,0,18,14.22v43.9a1.215,1.215,0,0,0,2.049.89L35.074,45.148,50.1,59.014a1.22,1.22,0,0,0,.829.329,1.341,1.341,0,0,0,.488-.1,1.22,1.22,0,0,0,.732-1.122V14.22A1.22,1.22,0,0,0,50.928,13Zm-1.22,42.343L35.9,42.6a1.22,1.22,0,0,0-1.659,0L20.439,55.343v-39.9h29.27Z"
-                                            transform="translate(-18 -13)" fill="#0097b2" />
+                                <!-- <button data-title="plantilla_<?php echo get_row_index(); ?>" class="flex-shrink-0">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="34.148" height="46.345" viewBox="0 0 34.148 46.345">
+                                        <path id="bookmark_save_storage_basic_icon_192482" d="M50.928,13H19.22A1.22,1.22,0,0,0,18,14.22v43.9a1.215,1.215,0,0,0,2.049.89L35.074,45.148,50.1,59.014a1.22,1.22,0,0,0,.829.329,1.341,1.341,0,0,0,.488-.1,1.22,1.22,0,0,0,.732-1.122V14.22A1.22,1.22,0,0,0,50.928,13Zm-1.22,42.343L35.9,42.6a1.22,1.22,0,0,0-1.659,0L20.439,55.343v-39.9h29.27Z" transform="translate(-18 -13)" fill="#0097b2" />
                                     </svg>
-                                </button>
-                                <button class="flex-shrink-0 .dowmload-button"
-                                    data-modal-target="<?php echo get_sub_field("titulo") ?>">
-                                    <svg id="Componente_10_1" data-name="Componente 10 – 1" xmlns="http://www.w3.org/2000/svg"
-                                        width="48.291" height="46.345" viewBox="0 0 48.291 46.345">
-                                        <path id="Trazado_9" data-name="Trazado 9"
-                                            d="M44.717,59.2a2.03,2.03,0,0,0,2.032-2.032V44.591h4.842V57.474a6.568,6.568,0,0,1-6.571,6.571H9.871A6.568,6.568,0,0,1,3.3,57.474V44.591H8.142V57.171A2.03,2.03,0,0,0,10.174,59.2Zm-26.8-41.5H36.892V34.69h7.263L27.424,51.032,10.693,34.69h7.263V17.7Z"
-                                            transform="translate(-3.3 -17.7)" fill="#1f4690" />
+                                </button> -->
+                                <button class="flex-shrink-0 .dowmload-button" data-modal-target="plantilla_<?php echo get_row_index(); ?>">
+                                    <svg id="Componente_10_1" data-name="Componente 10 – 1" xmlns="http://www.w3.org/2000/svg" width="48.291" height="46.345" viewBox="0 0 48.291 46.345">
+                                        <path id="Trazado_9" data-name="Trazado 9" d="M44.717,59.2a2.03,2.03,0,0,0,2.032-2.032V44.591h4.842V57.474a6.568,6.568,0,0,1-6.571,6.571H9.871A6.568,6.568,0,0,1,3.3,57.474V44.591H8.142V57.171A2.03,2.03,0,0,0,10.174,59.2Zm-26.8-41.5H36.892V34.69h7.263L27.424,51.032,10.693,34.69h7.263V17.7Z" transform="translate(-3.3 -17.7)" fill="#1f4690" />
                                     </svg>
                                 </button>
                             </div>
                         </div>
-                        <div class="modal modal--xl" data-modal-id="<?php echo get_sub_field("titulo") ?>">
+                        <div class="modal modal--xl" data-modal-id="plantilla_<?php echo get_row_index(); ?>">
                             <div class="modal__container">
                                 <div class="modal__wrapper">
                                     <div class="modal__content">
@@ -131,18 +114,11 @@ get_header();
                                                     <h2 class="font-gordita-bold text-20 text-blue mb-6">Nombre de la plantilla
                                                     </h2>
                                                     <form action="" class="grid grid-rows-3 gap-4 modal-plantillas-form">
-                                                        <input
-                                                            class="px-6 py-3 w-full rounded-[10px] text-celeste-100 text-18 font-gordita-regular bg-white"
-                                                            placeholder="Nombres y Apellidos" />
-                                                        <input
-                                                            class="px-6 py-3 w-full rounded-[10px] text-celeste-100 text-18 font-gordita-regular bg-white"
-                                                            placeholder="Correo Electrónico" />
-                                                        <input
-                                                            class="px-6 py-3 w-full rounded-[10px] text-celeste-100 text-18 font-gordita-regular bg-white"
-                                                            placeholder="Número de celular" />
+                                                        <input class="px-6 py-3 w-full rounded-[10px] text-celeste-100 text-18 font-gordita-regular bg-white" placeholder="Nombres y Apellidos" />
+                                                        <input class="px-6 py-3 w-full rounded-[10px] text-celeste-100 text-18 font-gordita-regular bg-white" placeholder="Correo Electrónico" />
+                                                        <input class="px-6 py-3 w-full rounded-[10px] text-celeste-100 text-18 font-gordita-regular bg-white" placeholder="Número de celular" />
                                                         <div class="flex justify-center mt-4">
-                                                            <a href="<?php echo home_url("/tienda-2") ?>" type="submit"
-                                                                class="button">Descargar Plantilla
+                                                            <a href="<?php echo home_url("/tienda-2") ?>" type="submit" class="button">Descargar Plantilla
                                                                 Gratis</a>
                                                         </div>
                                                     </form>
@@ -154,10 +130,11 @@ get_header();
                             </div>
                         </div>
                     </li>
-                <?php endwhile; endif; ?>
-        </ul>
-    </div>
-</section>
+                <?php endwhile; ?>
+            </ul>
+        </div>
+    </section>
+<?php endif; ?>
 
 <?php
 get_footer();

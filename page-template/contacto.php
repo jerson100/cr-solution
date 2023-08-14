@@ -34,11 +34,11 @@ get_header();
                     <ul class="flex flex-col gap-6 max-w-[360px] mb-10">
                         <li class="flex gap-4 items-center">
                             <img src="<?php echo IMG ?>/Contacto/Grupo 155.svg" />
-                            <span class="text-celeste-100 text-25 font-gordita-regular">crsolutionsac@gmail.com</span>
+                            <span class="text-celeste-100 text-25 font-gordita-regular"><?php echo get_option('correo') ?></span>
                         </li>
                         <li class="flex gap-4 items-center">
                             <img src="<?php echo IMG ?>/Contacto/Grupo 156.svg" />
-                            <span class="text-celeste-100 text-25 font-gordita-regular">+51 960 352 767</span>
+                            <span class="text-celeste-100 text-25 font-gordita-regular"><?php echo get_option('nro_1') ?></span>
                         </li>
                         <li class="flex gap-4 items-center">
                             <img src="<?php echo IMG ?>/Contacto/Grupo 157.svg" />
@@ -51,9 +51,29 @@ get_header();
                         redes:
                     </p>
                     <ul class="grid-cols-3 gap-8 inline-grid">
-                        <li><img src="<?php echo IMG ?>/Contacto/Icon awesome-facebook-square.svg" alt="Correo"></li>
-                        <li><img src="<?php echo IMG ?>/Contacto/Icon awesome-instagram.svg" alt="instagram"></li>
-                        <li><img src="<?php echo IMG ?>/Contacto/Grupo 29.svg" alt="tiktok"></li>
+                        <?php if(!empty(get_option('facebook'))): ?>
+                        <li>
+                            <a href="<?php echo get_option('facebook') ?>" target="_blank">
+                                <img src="<?php echo IMG ?>/Contacto/Icon awesome-facebook-square.svg" alt="Correo">
+                            </a>
+                        </li>
+                        <?php endif; ?>
+
+                        <?php if(!empty(get_option('instagram'))): ?>
+                        <li>
+                            <a href="<?php echo get_option('instagram') ?>" target="_blank">
+                                <img src="<?php echo IMG ?>/Contacto/Icon awesome-instagram.svg" alt="instagram">
+                            </a>
+                        </li>
+                        <?php endif; ?>
+
+                        <?php if(!empty(get_option('tiktok'))): ?>
+                        <li>
+                            <a href="<?php echo get_option('tiktok') ?>" target="_blank">
+                                <img src="<?php echo IMG ?>/Contacto/Grupo 29.svg" alt="tiktok">
+                            </a>
+                        </li>
+                        <?php endif; ?>
                     </ul>
                 </div>
                 <div>

@@ -36,10 +36,10 @@
 				    
 				    <table class="form-table">
 				        
-				        <tr valign="top">
+				        <!-- <tr valign="top">
 							<th scope="row" style="padding:0 0 16px 0;vertical-align:middle;">Whatsapp</th>
 							<td style="padding:0 0 16px 0"><input style="width: 100%;" type="text" name="whatsapp" value="<?php echo get_option('whatsapp'); ?>"></td>
-						</tr>
+						</tr> -->
 					    <tr valign="top">
 							<th scope="row" style="padding:0 0 16px 0;vertical-align:middle;">Facebook</th>
 							<td style="padding:0 0 16px 0"><input style="width: 100%;" type="text" name="facebook" value="<?php echo get_option('facebook'); ?>"></td>
@@ -52,14 +52,14 @@
 							<th scope="row" style="padding:0 0 16px 0;vertical-align:middle;">Instagram</th>
 							<td style="padding:0 0 16px 0"><input style="width: 100%;" type="text" name="instagram" value="<?php echo get_option('instagram'); ?>"></td>
 						</tr>
-						<tr valign="top">
+						<!-- <tr valign="top">
 							<th scope="row" style="padding:0 0 16px 0;vertical-align:middle;">Youtube</th>
 							<td style="padding:0 0 16px 0"><input style="width: 100%;" type="text" name="youtube" value="<?php echo get_option('youtube'); ?>"></td>
 						</tr>
 						<tr valign="top">
 							<th scope="row" style="padding:0 0 16px 0;vertical-align:middle;">LinkedIn</th>
 							<td style="padding:0 0 16px 0"><input style="width: 100%;" type="text" name="linkedin" value="<?php echo get_option('linkedin'); ?>"></td>
-						</tr>
+						</tr> -->
 						
 					</table>
 					<hr><br>
@@ -78,14 +78,14 @@
 							<th scope="row" style="padding:0 0 16px 0;vertical-align:middle;">Número (1)</th>
 							<td style="padding:0 0 16px 0"><input style="width: 100%;" type="text" name="nro_1" value="<?php echo get_option('nro_1'); ?>"></td>
 						</tr>
-                        <tr valign="top">
+                        <!-- <tr valign="top">
 							<th scope="row" style="padding:0 0 16px 0;vertical-align:middle;">Número (2)</th>
 							<td style="padding:0 0 16px 0"><input style="width: 100%;" type="text" name="nro_2" value="<?php echo get_option('nro_2'); ?>"></td>
 						</tr>
                         <tr valign="top">
 							<th scope="row" style="padding:0 0 16px 0;vertical-align:middle;">Número (3)</th>
 							<td style="padding:0 0 16px 0"><input style="width: 100%;" type="text" name="nro_3" value="<?php echo get_option('nro_3'); ?>"></td>
-						</tr>
+						</tr> -->
 						<tr valign="top">
 							<th scope="row" style="padding:0 0 16px 0;vertical-align:middle;">Correo</th>
 							<td style="padding:0 0 16px 0"><input style="width: 100%;" type="text" name="correo" value="<?php echo get_option('correo'); ?>"></td>
