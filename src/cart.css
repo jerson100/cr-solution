@@ -1,0 +1,245 @@
+/* @font-face {
+  font-family: "GB";
+  src: url("../fonts/Gordita Bold.woff");
+}
+@font-face {
+  font-family: "GR";
+  src: url("../fonts/Gordita Regular.woff");
+}
+@font-face {
+  font-family: "GM";
+  src: url("../fonts/Gordita Medium.woff");
+} */
+.toggleDiv {
+  display: none;
+}
+
+.datos_cliente {
+  background: #f2f2f2;
+  padding: 4rem 0 6rem;
+  transition: all 0.2s ease;
+}
+.datos_cliente:has(.plantillas-orders) .datos_cliente_button {
+  display: none !important;
+}
+.datos_cliente_box {
+  background: #d9d9d9;
+  border-radius: 10px;
+  width: min(100%, 1200px);
+  margin-inline: auto;
+  padding: 2rem;
+}
+.datos_cliente_box:has(.col2-set.close) {
+  background: transparent;
+  width: min(100%, 1000px);
+  height: 550px;
+  position: relative;
+}
+.datos_cliente_box:has(.plantillas-orders) {
+  background: transparent;
+  width: min(100%, 800px);
+}
+.datos_cliente .woocommerce-header {
+  margin-bottom: 18px;
+}
+.datos_cliente .woocommerce-header h3 {
+  color: #1f4690;
+  font-family: "GB";
+  font-size: 22px;
+  margin: 0;
+}
+.datos_cliente .woocommerce-header p {
+  font-family: "GR";
+  color: #313131;
+  margin: 0;
+}
+.datos_cliente .woocommerce-billing-fields__field-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px 5.5%;
+}
+.datos_cliente .woocommerce-billing-fields label {
+  display: none !important;
+}
+.datos_cliente .woocommerce-billing-fields .form-row {
+  padding: 0;
+  margin: 0;
+}
+.datos_cliente .woocommerce-billing-fields .form-row-wide {
+  grid-column: span 2;
+  order: 2;
+}
+.datos_cliente .woocommerce-billing-fields .form-row input {
+  padding: 0;
+  display: block;
+  background: white;
+  border-radius: 10px;
+  min-height: 48px;
+  width: 100%;
+  font-family: "GR";
+  padding: 4px 14px;
+}
+.datos_cliente .woocommerce-billing-fields .form-row input::-moz-placeholder {
+  color: #0097b2;
+}
+.datos_cliente .woocommerce-billing-fields .form-row input::placeholder {
+  color: #0097b2;
+}
+.datos_cliente #place_order,
+.datos_cliente_button {
+  margin-top: 50px;
+  cursor: pointer;
+  margin-inline: auto;
+  width: 270px;
+  height: 50px;
+  background: #1f4690;
+  color: #fff026;
+  display: grid;
+  place-items: center;
+  font-family: "GM";
+  float: none !important;
+  font-weight: 100 !important;
+  padding: 0 !important;
+  font-size: 19px;
+}
+.datos_cliente #place_order p,
+.datos_cliente_button p {
+  margin: 0;
+  color: #fff026;
+  font-size: 19px;
+  font-family: "GM";
+}
+.datos_cliente #place_order:hover,
+.datos_cliente_button:hover {
+  background: #0097b2;
+}
+.datos_cliente #place_order {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.datos_cliente #payment .wc_payment_methods {
+  position: relative;
+}
+.datos_cliente #payment .wc_payment_method {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  grid-gap: 20px;
+}
+.datos_cliente #payment .wc_payment_method:not(:last-child) {
+  margin-bottom: 16px;
+}
+.datos_cliente #payment .payment_box {
+  position: absolute !important;
+  right: 0;
+  top: 0;
+  font-family: "GR" !important;
+  width: calc(100% - 200px) !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: white !important;
+  border-radius: 10px !important;
+  padding: 1rem !important;
+}
+.datos_cliente #payment .payment_box span,
+.datos_cliente #payment .payment_box p,
+.datos_cliente #payment .payment_box li {
+  font-family: "GR" !important;
+}
+.datos_cliente #payment .payment_box::before {
+  display: none !important;
+}
+.datos_cliente #payment .payment_method_button {
+  width: 100%;
+  background: #1f4690;
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: -moz-fit-content;
+  height: fit-content;
+  height: 70px;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.datos_cliente #payment .payment_method_button:hover {
+  background: #0097b2;
+}
+.datos_cliente #payment .payment_method_button input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  z-index: 2;
+}
+.datos_cliente #payment .payment_method_button label {
+  width: 100%;
+  color: #fff026;
+  text-align: left;
+  font-size: 16px;
+  font-family: "GR";
+}
+
+.plantillas-orders {
+  background: white;
+  border-radius: 8px;
+  padding: 14px 6.5%;
+  margin-top: 20px;
+  border: 1px solid #707070;
+}
+.plantillas-orders li {
+  display: grid;
+  grid-template-columns: 1fr 23.5%;
+  grid-gap: 25px;
+  align-items: center;
+}
+.plantillas-orders li > div {
+  width: 100%;
+}
+.plantillas-orders li img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: contain;
+  object-fit: contain;
+  -o-object-position: center;
+  object-position: center;
+}
+.plantillas-orders li .amounts > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.plantillas-orders li .item p {
+  display: flex;
+  align-items: center;
+}
+.plantillas-orders li .item p:nth-child(1) {
+  font-family: "GB";
+  color: #1f4690;
+}
+.plantillas-orders li .item p:nth-child(2) {
+  font-family: "GR";
+  gap: 10px;
+}
+.plantillas-orders li .item p:nth-child(2) span {
+  border: 1px solid #0097b2;
+  border-radius: 8px;
+  display: block;
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+}
+.plantillas-orders li .item p:nth-child(3) {
+  color: #0097b2;
+  font-family: "GB";
+}
+.plantillas-orders li .total {
+  margin-top: 20px;
+  border-top: 2px solid #707070;
+  padding-top: 5px;
+}
+.plantillas-orders li .total p,
+.plantillas-orders li .total span {
+  color: #1f4690;
+} /*# sourceMappingURL=cart.css.map */

@@ -204,6 +204,21 @@ body {
   --txt-color: #ffff;
 }
 
+.button--celeste2 {
+  --bg-color: #0097b2;
+  --txt-color: #fff026;
+}
+
+.button--md {
+  padding: 12px 40px;
+  font-size: 20px;
+}
+
+.button--lg {
+  padding: 15px 25px;
+  font-size: 30px;
+}
+
 .button:active {
   transform: scale(1.1);
 }
@@ -525,7 +540,9 @@ body {
 
 .header__link {
   position: relative;
-  min-width: 160px;
+  font-family: "Gordita Medium";
+  font-size: 1.563rem;
+  line-height: 2.188rem;
 }
 
 .header__link:hover {
@@ -544,6 +561,33 @@ body {
   transition: opacity 250ms ease;
 }
 
+.header_sub-list {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  min-width: 160px;
+  transform: scale(0);
+  transition: all ease 250ms;
+  background-color: #0097b2;
+  padding: 1rem;
+  border-radius: 10px;
+  color: #ffffff;
+  transform-origin: left top;
+}
+
+.header_sub-list li {
+  display: flex;
+  justify-content: center;
+}
+
+.header_sub-list li .header__link:hover {
+  color: #ffff;
+}
+
+header li:hover > ul {
+  transform: scale(1);
+}
+
 .header__link:hover::before {
   opacity: 1;
 }
@@ -557,6 +601,20 @@ body {
 
 .custom-splide .splide__arrows button:last-child {
   transform: translateX(60px);
+}
+
+.custom-splide--vertical .splide__arrows button:first-child {
+  transform: translateX(0);
+}
+
+.custom-splide--vertical .splide__arrows button:last-child {
+  transform: translateX(0);
+}
+
+.custom-splide--vertical.custom-splide--first-hidden
+  .splide__arrows
+  button:first-child {
+  display: none;
 }
 
 .custom-splide .splide__arrows button {
@@ -600,4 +658,100 @@ body {
 
 .verification__description ul li::marker {
   color: #fff026;
+}
+
+.content-editor-services h2 {
+  color: #0097b2;
+  font-size: 2.063rem;
+  line-height: 2.188rem;
+  font-family: "Gordita Bold";
+  margin-bottom: 1.6rem;
+}
+
+.content-editor-services h3 {
+  color: #1f4690;
+  font-size: 1.75rem;
+  line-height: 2.5rem;
+  font-family: "Gordita Bold";
+  margin-bottom: 1.6rem;
+}
+
+.content-editor-services p {
+  color: #313131;
+  font-family: "Gordita Regular";
+  font-size: 1.463rem;
+  line-height: 2.188rem;
+  margin-bottom: 1.3rem;
+}
+
+.content-editor-services summary {
+  color: #0097b2;
+  font-family: "Gordita Bold";
+  font-size: 1.875rem;
+  line-height: 2.688rem;
+  margin-bottom: 1rem;
+}
+
+/* Cambiar el marker por un icono de flecha hacia la derecha */
+.content-editor-services summary::-webkit-details-marker {
+  display: none; /* Oculta el marker predeterminado de los detalles */
+}
+
+.content-editor-services summary::after {
+  content: "\002B"; /* Código Unicode para la flecha hacia la derecha */
+  font-size: 30px;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+.content-editor-services summary summary::after {
+  font-size: 24px;
+}
+
+details[open] > summary::after {
+  content: "\2212"; /* Código Unicode para la flecha hacia abajo */
+}
+
+/* Estilos adicionales para resaltar el elemento summary */
+
+.content-editor-services summary {
+  cursor: pointer;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.content-editor-services details b {
+  color: #1f4690;
+  font-size: 1.563rem;
+  line-height: 2.188rem;
+  font-family: "Gordita Regular";
+}
+
+.content-editor-services details ul li {
+  color: #313131;
+  font-size: 1.563rem;
+  line-height: 2.188rem;
+  font-family: "Gordita Regular";
+}
+
+.content-editor-services details ul {
+  margin-left: 3rem;
+  margin-bottom: 1.3rem;
+}
+
+.content-editor-services .aligncenter {
+  margin-inline: auto;
+}
+
+.content-editor-services summary h2,
+.content-editor-services summary h3,
+.content-editor-services summary h4 {
+  margin-bottom: 0;
+}
+
+.page-header {
+  transition: height ease 250ms;
 }

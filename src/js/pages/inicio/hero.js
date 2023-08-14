@@ -29,9 +29,7 @@ const heroSlider = (time = 2000) => {
 
   let topIndex = 1;
   let bottomIndex = 1;
-  console.log("render One");
   setInterval(() => {
-    console.log("render");
     if (topIndex === topImages.length) topIndex = 0;
     if (bottomIndex === bottomImages.length) bottomIndex = 0;
     removedClass([
