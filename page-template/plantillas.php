@@ -141,8 +141,9 @@ get_header();
                                                             class="px-6 py-3 w-full rounded-[10px] text-celeste-100 text-18 font-gordita-regular bg-white"
                                                             placeholder="Número de celular" />
                                                         <div class="flex justify-center mt-4">
-                                                            <button type="submit" class="button">Descargar Plantilla
-                                                                Gratis</button>
+                                                            <a href="<?php echo home_url("/tienda-2") ?>" type="submit"
+                                                                class="button">Descargar Plantilla
+                                                                Gratis</a>
                                                         </div>
                                                     </form>
                                                 </div>

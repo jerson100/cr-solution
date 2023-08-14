@@ -32,18 +32,18 @@
 
     <!-- </header> -->
 
-    <header class="bg-white fixed left-0 top-0 w-full py-[20px] z-10 shadow-sm">
-        <div class="container">
-            <div class="flex items-center justify-between">
-                <div class="flex items-center">
+    <header class="bg-white fixed left-0 top-0 w-full py-[20px] z-10 shadow-sm h-[135px] page-header">
+        <div class="container h-full">
+            <div class="flex items-center justify-between h-full">
+                <div class="flex items-center h-full">
                     <!-- <div class="h-[95px] bg-blue-600 w-[200px]"></div> -->
                     <img src="<?php echo IMG ?>/Inicio/LOGOC&R.svg" alt="Logo de Web CR Solutions"
-                        class="w-auto h-[95px]" />
+                        class="w-auto h-full" />
                 </div>
-                <div>
-                    <nav class="header__nav">
+                <div class="h-full">
+                    <nav class="header__nav h-full">
                         <ul
-                            class="flex gap-[93px] [&>li>a]:text-blue header__navigation [&>li>a]:font-gordita-medium items-center">
+                            class="flex gap-[93px] [&>li>a]:text-blue header__navigation items-center [&>li]:flex [&>li]:items-center [&>li]:h-full [&>li]:relative h-full [&>li]:justify-center">
                             <li>
                                 <a href="<?php echo home_url('/'); ?>" class="section-text header__link">Inicio</a>
                             </li>
@@ -54,6 +54,17 @@
                             <li>
                                 <a href="<?php echo home_url('/servicios'); ?>"
                                     class="section-text header__link">Servicios</a>
+                                <ul class="header_sub-list">
+                                    <li><a href="<?php echo home_url('/servicio/capacitacion-practica-en-la-elaboracion-del-sistema-de-gestion-de-sst/'); ?>"
+                                            class="header__link">Capacitaciones</a></li>
+                                    <li><a href="<?php echo home_url('/servicio/asesoria-implementacion-y-mantenimiento-del-sistema-de-gestion-de-sst-para-mypes/'); ?>"
+                                            class="header__link">Asesoría</a>
+                                    </li>
+                                    <li><a href="<?php echo home_url('/plantillas'); ?>"
+                                            class="header__link">Plantillas</a></li>
+                                    <li><a href="<?php echo home_url('/servicio/entrenamiento-personalizado-en-trabajos-de-alto-riesgo-con-equipos-in-situ/'); ?>"
+                                            class="header__link">Entrenamientos</a></li>
+                                </ul>
                             </li>
                             <li>
                                 <a href="<?php echo home_url('/blogs'); ?>" class="section-text header__link">Blog</a>
