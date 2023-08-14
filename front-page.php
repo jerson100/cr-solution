@@ -89,7 +89,43 @@ get_header();
         </div>
     </div>
 </div>
-<?php echo get_template_part('inc/quienes-somos') ?>
+
+<section class="bg-white page-section overflow-x-hidden wow animate__animated animate__fadeIn" data-wow-duration="1s">
+    <div class="container">
+        <div class="flex justify-between">
+            <div class="flex items-center w-[40%] wow animate__animated animate__backInLeft" data-wow-duration="1s">
+                <div class="flex flex-col">
+                    <?php if (!empty(get_field("titulo_qs"))) : ?>
+                    <h2 class="section-title">
+                        <?php echo get_field("titulo_qs") ?>
+                    </h2>
+                    <?php endif; ?>
+
+                    <?php if (!empty(get_field("descripcion_qs"))) : ?>
+                    <p class="section-text mb-8">
+                        <?php echo get_field("descripcion_qs") ?>
+                    </p>
+                    <?php endif; ?>
+                    <div>
+                        <a href="<?php echo esc_url(home_url('quienes-somos')) ?>" class="button">Ver más</a>
+                    </div>
+                </div>
+            </div>
+            <?php if (!empty(get_field("imagen_qs"))) : ?>
+            <div class="flex items-center justify-center relative w-[45%] wow animate__animated animate__backInRight"
+                data-wow-duration="1s">
+                <div class="bg-celeste-50 absolute left-[-20px] top-[20px] h-full w-full rounded-xl"></div>
+                <img src="<?php echo get_field("imagen_qs")["url"] ?>" 
+                    alt="<?php echo get_field("imagen_qs")["alt"] ?>" 
+                    title="<?php echo get_field("imagen_qs")["title"] ?>" 
+                    width="<?php echo get_field("imagen_qs")["width"] ?>" 
+                    height="<?php echo get_field("imagen_qs")["height"] ?>" 
+                    loading="lazy" class="rounded-xl z-[1]" />
+            </div>
+            <?php endif; ?>
+        </div>
+    </div>
+</section>
 
 <?php
 global $wp_query;
@@ -107,14 +143,17 @@ $wp_query = new WP_Query(
         <div class="container">
             <div class="flex flex-col gap-8">
                 <div class="max-w-[1088px] w-full mx-auto text-center mb-8">
-                    <h2 class="section-title">Servicios</h2>
+                    <?php if (!empty(get_field("titulo_ser"))) : ?>
+                    <h2 class="section-title"><?php echo get_field('titulo_ser') ?></h2>
+                    <?php endif; ?>
+                    
+                    <?php if (!empty(get_field("descripcion_ser"))) : ?>
                     <div class="flex justify-center">
                         <p class="section-text">
-                            Prioriza la seguridad laboral de tu equipo y descubre nuestras
-                            soluciones especializadas para un entorno laboral más seguro y
-                            eficiente. ¡No dejes que los riesgos te detengan!
+                            <?php echo get_field('descripcion_ser') ?>
                         </p>
                     </div>
+                    <?php endif; ?>
                 </div>
                 <!-- <div
                 id="servicios"
@@ -164,20 +203,28 @@ $wp_query = new WP_Query(
         </div>
     </section>
 <?php endif; ?>
+<?php wp_reset_postdata(); ?>
+<?php wp_reset_query(); ?>
+
 <?php echo get_template_part("inc/plantillas_gratis"); ?>
+
 <?php echo get_template_part("inc/confian_en_nosotros"); ?>
+
+<?php if(have_rows('lista_de_capacitaciones')): ?>
 <section class="page-section bg-[#F2F2F2] wow animate__animated animate__fadeIn" data-wow-duration="1s">
     <div class="container">
         <div class="grid grid-cols-[510px_auto] gap-32">
             <div class="flex items-end">
                 <div class="flex flex-col">
-                    <h2 class="section-title section-title--celeste">Capacitaciones destacadas</h2>
+                    <?php if (!empty(get_field("titulo_ca"))) : ?>
+                    <h2 class="section-title section-title--celeste"><?php echo get_field('titulo_ca') ?></h2>
+                    <?php endif; ?>
+
+                    <?php if (!empty(get_field("descripcion_ca"))) : ?>
                     <p class="section-text">
-                        ¡Desafía tus límites y obtén la certificación en trabajos de
-                        alto riesgo para garantizar tu seguridad laboral! Explora
-                        nuestros cursos y prepárate para afrontar los riesgos y desafíos
-                        con confianza y conocimiento.
+                        <?php echo get_field('descripcion_ca') ?>
                     </p>
+                    <?php endif; ?>
                 </div>
             </div>
             <div
@@ -185,141 +232,30 @@ $wp_query = new WP_Query(
                 <div class="splide custom-splide" id="capacitaciones-destacadas">
                     <div class="splide__track">
                         <ul class="splide__list">
+                            <?php while(have_rows('lista_de_capacitaciones')): the_row(); ?>
                             <li class="splide__slide">
                                 <article class="shadow-custom flex flex-col h-full m-[.2rem]">
-                                    <img src="<?php echo IMG ?>/Inicio/TRABAJOS EN CALIENTE Y PROTECCIÓN CONTRA INCENDIOS.jpg"
-                                        alt="TRABAJOS EN CALIENTE Y PROTECCIÓN CONTRA INCENDIOS"
-                                        title="TRABAJOS EN CALIENTE Y PROTECCIÓN CONTRA INCENDIOS" />
+                                    <img 
+                                        src="<?php echo get_sub_field('imagen_capa')['url'] ?>" 
+                                        title="<?php echo get_sub_field('imagen_capa')['title'] ?>" 
+                                        alt="<?php echo get_sub_field('imagen_capa')['alt'] ?>" 
+                                        width="<?php echo get_sub_field('imagen_capa')['width'] ?>" 
+                                        height="<?php echo get_sub_field('imagen_capa')['height'] ?>" 
+                                        loading="lazy"
+                                    >
                                     <div class="p-4 bg-white flex-grow">
                                         <h3
                                             class="text-[1.25rem] leading-[1.563rem] mb-4 text-blue font-gordita-bold line-clamp-2">
-                                            Trabajos en caliente y protección contra incendios
+                                            <?php echo get_sub_field('titulo_capa'); ?>
                                         </h3>
-                                        <p class="text-[1.125rem] text-celeste-50 mb-4">Virtual 14 de junio</p>
+                                        <p class="text-[1.125rem] text-celeste-50 mb-4"><?php echo get_sub_field('descripcion_capa'); ?></p>
                                         <div class="flex justify-center">
-                                            <a href="#" class="button">Ver más</a>
+                                            <a href="<?php echo get_sub_field('enlace_capa'); ?>" class="button">Ver más</a>
                                         </div>
                                     </div>
                                 </article>
                             </li>
-                            <li class="splide__slide">
-                                <article class="shadow-custom flex flex-col h-full m-[.2rem]">
-                                    <img src="<?php echo IMG ?>/Inicio/cheerful-industrial-climber-during-winterization-w-2021-09-02-04-29-12-utc.jpg"
-                                        alt="cheerful-industrial-climber-during-winterization-w-2021-09-02-04-29-12-utc"
-                                        title="cheerful-industrial-climber-during-winterization-w-2021-09-02-04-29-12-utc" />
-                                    <div class="p-4 bg-white flex-grow">
-                                        <h3
-                                            class="text-[1.25rem] leading-[1.563rem] mb-4 text-blue font-gordita-bold line-clamp-2">
-                                            Trabajos en altura y protección contra caídas
-                                        </h3>
-                                        <p class="text-[1.125rem] text-celeste-50 mb-4">Virtual 14 de junio</p>
-                                        <div class="flex justify-center">
-                                            <a href="#" class="button">Ver más</a>
-                                        </div>
-                                    </div>
-                                </article>
-                            </li>
-                            <li class="splide__slide">
-                                <article class="shadow-custom flex flex-col h-full m-[.2rem]">
-                                    <img src="<?php echo IMG ?>/Inicio/linkedin-In-Stream_Wide___RAY_2866-2.jpg"
-                                        alt="linkedin-In-Stream_Wide___RAY_2866-2"
-                                        title="linkedin-In-Stream_Wide___RAY_2866-2" />
-                                    <div class="p-4 bg-white flex-grow">
-                                        <h3
-                                            class="text-[1.25rem] leading-[1.563rem] mb-4 text-blue font-gordita-bold line-clamp-2">
-                                            Trabajos en espacios confinados
-                                        </h3>
-                                        <p class="text-[1.125rem] text-celeste-50 mb-4">Virtual 14 de junio</p>
-                                        <div class="flex justify-center">
-                                            <a href="#" class="button">Ver más</a>
-                                        </div>
-                                    </div>
-                                </article>
-                            </li>
-                            <li class="splide__slide">
-                                <article class="shadow-custom flex flex-col h-full m-[.2rem]">
-                                    <img src="<?php echo IMG ?>/Inicio/sirva-tecnico-electrico-que-trabaja-centralita-fusibles.jpg"
-                                        alt="Seguridad en trabajos eléctricos"
-                                        title="Seguridad en trabajos eléctricos" />
-                                    <div class="p-4 bg-white flex-grow">
-                                        <h3
-                                            class="text-[1.25rem] leading-[1.563rem] mb-4 text-blue font-gordita-bold line-clamp-2">
-                                            Seguridad en trabajos eléctricos
-                                        </h3>
-                                        <p class="text-[1.125rem] text-celeste-50 mb-4">Virtual 14 de junio</p>
-                                        <div class="flex justify-center">
-                                            <a href="#" class="button">Ver más</a>
-                                        </div>
-                                    </div>
-                                </article>
-                            </li>
-                            <li class="splide__slide">
-                                <article class="shadow-custom flex flex-col h-full m-[.2rem]">
-                                    <img src="<?php echo IMG ?>/Inicio/bg-single.jpg"
-                                        alt="Seguridad en trabajos de izaje de carga"
-                                        title="Seguridad en trabajos de izaje de carga" />
-                                    <div class="p-4 bg-white flex-grow">
-                                        <h3
-                                            class="text-[1.25rem] leading-[1.563rem] mb-4 text-blue font-gordita-bold line-clamp-2">
-                                            Seguridad en trabajos de izaje de cargas
-                                        </h3>
-                                        <p class="text-[1.125rem] text-celeste-50 mb-4">Virtual 14 de junio</p>
-                                        <div class="flex justify-center">
-                                            <a href="#" class="button">Ver más</a>
-                                        </div>
-                                    </div>
-                                </article>
-                            </li>
-                            <li class="splide__slide">
-                                <article class="shadow-custom flex flex-col h-full m-[.2rem]">
-                                    <img src="<?php echo IMG ?>/Inicio/persona-que-trabaja-edificacion-construccion.jpg"
-                                        alt="Trabajos de demolición y excavaciones"
-                                        title="Trabajos de demolición y excavaciones" />
-                                    <div class="p-4 bg-white flex-grow">
-                                        <h3
-                                            class="text-[1.25rem] leading-[1.563rem] mb-4 text-blue font-gordita-bold line-clamp-2">
-                                            Trabajos de demolición y excavaciones
-                                        </h3>
-                                        <p class="text-[1.125rem] text-celeste-50 mb-4">Virtual 14 de junio</p>
-                                        <div class="flex justify-center">
-                                            <a href="#" class="button">Ver más</a>
-                                        </div>
-                                    </div>
-                                </article>
-                            </li>
-                            <li class="splide__slide">
-                                <article class="shadow-custom flex flex-col h-full m-[.2rem]">
-                                    <img src="<?php echo IMG ?>/Inicio/TRABAJOS CON MATERIALES PELIGROSO.jpg"
-                                        alt="Trabajos en espacios confinados" title="Trabajos en espacios confinados" />
-                                    <div class="p-4 bg-white flex-grow">
-                                        <h3
-                                            class="text-[1.25rem] leading-[1.563rem] mb-4 text-blue font-gordita-bold line-clamp-2">
-                                            Trabajo con materiales peligrosos
-                                        </h3>
-                                        <p class="text-[1.125rem] text-celeste-50 mb-4">Virtual 14 de junio</p>
-                                        <div class="flex justify-center">
-                                            <a href="#" class="button">Ver más</a>
-                                        </div>
-                                    </div>
-                                </article>
-                            </li>
-                            <li class="splide__slide">
-                                <article class="shadow-custom flex flex-col h-full m-[.2rem]">
-                                    <img src="<?php echo IMG ?>/Inicio/main_qEc.jpg"
-                                        alt="Seguridad en bloqueo y etiquetado - LOTO"
-                                        title="Seguridad en bloqueo y etiquetado - LOTO" />
-                                    <div class="p-4 bg-white flex-grow">
-                                        <h3
-                                            class="text-[1.25rem] leading-[1.563rem] mb-4 text-blue font-gordita-bold line-clamp-2">
-                                            Seguridad en bloqueo y etiquetado - LOTO
-                                        </h3>
-                                        <p class="text-[1.125rem] text-celeste-50 mb-4">Virtual 14 de junio</p>
-                                        <div class="flex justify-center">
-                                            <a href="#" class="button">Ver más</a>
-                                        </div>
-                                    </div>
-                                </article>
-                            </li>
+                            <?php endwhile; ?>
                         </ul>
                     </div>
                 </div>
@@ -327,14 +263,20 @@ $wp_query = new WP_Query(
         </div>
     </div>
 </section>
+<?php endif; ?>
+
 <section class="page-section bg-[#FFFFFF] wow animate__animated animate__fadeIn" data-wow-duration="1s">
     <div class="container">
         <div class="max-w-3xl mx-auto text-center mb-12">
-            <h2 class="section-title">Blog</h2>
+            <?php if (!empty(get_field("titulo_bl"))) : ?>
+            <h2 class="section-title"><?php echo get_field('titulo_bl') ?></h2>
+            <?php endif; ?>
+
+            <?php if (!empty(get_field("descripcion_bl"))) : ?>
             <p class="section-text">
-                El conocimiento es poder, y en nuestro blog encontrarás la llave que
-                te abrirá las puertas hacia un futuro laboral más seguro y exitoso.
+                <?php echo get_field('descripcion_bl') ?>
             </p>
+            <?php endif; ?>
         </div>
         <div class="splide custom-splide" id="blog-slider">
             <div class="splide__track">
@@ -343,7 +285,7 @@ $wp_query = new WP_Query(
                     global $wp_query;
                     $wp_query = new WP_Query(
                         array(
-                            'post_type' => 'blog',
+                            'post_type' => 'post',
                             'posts_per_page' => 10,
                             'post_status' => 'publish'
                         )

@@ -11,7 +11,7 @@
                     <img src="" alt="" />
                 </div>
                 <div class="items-center flex">
-                    <a href="#" class="button-custom">
+                    <a href="<?php echo esc_url(home_url('plantillas')) ?>" class="button-custom">
                         <span>Haz click aquí
                         </span>
                         <span class="button-custom__icon"></span></a>

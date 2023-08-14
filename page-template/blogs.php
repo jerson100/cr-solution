@@ -28,7 +28,7 @@ get_header();
 global $wp_query;
 $wp_query = new WP_Query(
     array(
-        'post_type' => 'blog',
+        'post_type' => 'post',
         'posts_per_page' => 100,
         'post_status' => 'publish'
     )
