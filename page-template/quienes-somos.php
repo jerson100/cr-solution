@@ -27,7 +27,6 @@ get_header();
                 <?php echo get_field("main_content_quienes_somos_page") ?>
             </div>
             <div class="flex flex-col gap-20 [&>div>img]:rounded-lg [&>div>img]:max-w-full [&>div>img]:object-cover">
-                <!-- <div class="flex flex-col gap-20 [&>div>img]:max-w-[65%] [&>div>img]:object-cover"> -->
                 <?php if (have_rows("images_quienes_somos_page")):
                     while (have_rows("images_quienes_somos_page")):
                         the_row();
@@ -50,22 +49,6 @@ get_header();
                     endwhile;
                 endif;
                 ?>
-                <!-- 
-                <div class="flex flex-col">
-                    <img src="<?php echo IMG ?>/Quienes somos/Grupo 142.jpg" alt="" class="self-end relative z-[2]">
-                    <img src="<?php echo IMG ?>/Quienes somos/Grupo 143.jpg" alt=""
-                        class="self-start -mt-[11%] relative z-[1]">
-                </div>
-                <div class="flex flex-col">
-                    <img src="<?php echo IMG ?>/Quienes somos/Grupo 144.jpg" alt="" class="self-start relative z-[2]">
-                    <img src="<?php echo IMG ?>/Quienes somos/Grupo 145.jpg" alt=""
-                        class="self-end -mt-[11%] relative z-[1]">
-                </div>
-                <div class="flex flex-col">
-                    <img src="<?php echo IMG ?>/Quienes somos/Grupo 146.jpg" alt="" class="self-end relative z-[2]">
-                    <img src="<?php echo IMG ?>/Quienes somos/Grupo 147.jpg" alt=""
-                        class="self-start relative z-[1] -mt-[11%]">
-                </div> -->
             </div>
         </div>
     </div>
