@@ -1,34 +1,38 @@
 <?php
-/* Template Name: plantillas */
+/*
+    Template name: plantillas-mostrar-todos
+*/
+
 get_header();
+
+//$ID = get_the_ID();
+$ID = get_queried_object_id();
+
+$taxonomy  = 'plantillasgenero';
+
+$category = get_term($ID);
+$name = $category->name;
+$id_cat = $category->term_id;
+$slug = $category->slug;
+
 ?>
 
 <div class="screen-top relative">
-    <img src="<?php echo get_field("fondo_pagina_plantillas")["url"] ?>" alt="<?php echo get_field("fondo_pagina_plantillas")["alt"] ?>" width="<?php echo get_field("fondo_pagina_plantillas")["width"] ?>" height="<?php echo get_field("fondo_pagina_plantillas")["height"] ?>" class="w-full h-full object-cover absolute left-0 top-0 z-[1]" />
+    <img src="<?php echo IMG; ?>/Plantillas/Banners-2.jpg" class="w-full h-full object-cover absolute left-0 top-0 z-[1]" />
     <div class="container">
         <div class="max-w-[85%] w-full min-h-[264px] py-12 flex items-center justify-start">
             <h1 class="section-title section-title--white z-[2] relative text-white-150">
-                <?php echo get_field("titulo_pagina_plantillas") ?>
+                PLANTILLAS
             </h1>
         </div>
     </div>
 </div>
 
 <?php
-global $wp_query;
-$taxonomy = 'plantilla';
-
-$wp_query = new WP_Query(
-    array(
-        'post_type' => $taxonomy,
-        'posts_per_page' => 100,
-        'post_status' => 'publish'
-    )
-);
 
 $terms = get_terms(
     array(
-        'taxonomy' => $taxonomy . 'sgenero',
+        'taxonomy' => $taxonomy,
         'hide_empty' => false
     )
 );
@@ -40,10 +44,10 @@ $terms = get_terms(
         <div class="container">
             <div class="mb-14">
                 <h2 class="section-title text-center max-w-[850px] mx-auto">
-                    <?php echo get_field("titulo_seccion_plantillas_page") ?>
+                    ¿Quieres llevar la eficiencia de tu trabajo en SST al siguiente nivel?
                 </h2>
                 <p class="text-25 font-gordita-regular text-center text-text-primary">
-                    <?php echo get_field("descripcion_seccion_plantillas_page") ?>
+                    Descubre nuestras plantillas gratuitas descargables y optimiza tus procesos de forma instantánea.
                 </p>
             </div>
             <?php if (!empty($terms) && !is_wp_error($terms)) : ?>
@@ -133,12 +137,11 @@ $terms = get_terms(
                             </div>
                         </div>
                     </li>
-                <?php $f++; endwhile; ?>
+                <?php endwhile; ?>
             </ul>
         </div>
     </section>
 <?php endif; ?>
 
-<?php
-get_footer();
-?>
+
+<?php get_footer(); ?>
