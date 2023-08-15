@@ -1,5 +1,5 @@
 <section class="page-section bg-white wow animate__animated animate__fadeIn" data-wow-duration="1s">
-    <div class="container">
+    <div class="containerc">
         <div class="flex flex-col">
             <h2 class="section-title text-center w-full">
                 <!-- Empresas que confían en nosotros: -->

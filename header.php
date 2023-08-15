@@ -32,18 +32,21 @@
 
     <!-- </header> -->
 
-    <header class="bg-white fixed left-0 top-0 w-full py-[20px] z-10 shadow-sm h-[135px] page-header">
-        <div class="container h-full">
+    <header
+        class="bg-white fixed left-0 top-0 w-full py-[.5rem] laptop:py-[1rem] desktop-large:py-[20px] z-10 shadow-sm h-[56px] laptop:h-[80px] desktop:h-[100px] desktop-large:h-[135px] page-header">
+        <div class="containerc h-full">
             <div class="flex items-center justify-between h-full">
                 <div class="flex items-center h-full">
                     <!-- <div class="h-[95px] bg-blue-600 w-[200px]"></div> -->
+                    <!-- <a href="<?php echo esc_url(home_url('/')) ?>"> -->
                     <img src="<?php echo IMG ?>/Inicio/LOGOC&R.svg" alt="Logo de Web CR Solutions"
                         class="w-auto h-full" />
+                    <!-- </a> -->
                 </div>
                 <div class="h-full">
-                    <nav class="header__nav h-full">
+                    <nav class="header__nav h-full hidden laptop:block">
                         <ul
-                            class="flex gap-[93px] [&>li>a]:text-blue header__navigation items-center [&>li]:flex [&>li]:items-center [&>li]:h-full [&>li]:relative h-full [&>li]:justify-center">
+                            class="flex laptop:gap-8 desktop:gap-11 desktop-middle:gap-14 desktop-large:gap-[93px] [&>li>a]:text-blue header__navigation items-center [&>li]:flex [&>li]:items-center [&>li]:h-full [&>li]:relative h-full [&>li]:justify-center">
                             <li>
                                 <a href="<?php echo home_url('/'); ?>" class="section-text header__link">Inicio</a>
                             </li>
@@ -79,6 +82,13 @@
                             </li>
                         </ul>
                     </nav>
+                    <div class="h-full flex items-center laptop:hidden">
+                        <div class="flex flex-col w-[30px] h-[25px] gap-[5px] [&>div]:h-full [&>div]:bg-blue">
+                            <div class=""></div>
+                            <div class=""></div>
+                            <div class=""></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

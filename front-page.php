@@ -6,27 +6,27 @@
 get_header();
 ?>
 
-<div class="main-banner bg-opacity-25 screen-top h-screen-top"
+<div class="main-banner bg-opacity-25 screen-top h-screen-top bg-cover bg-no-repeat"
     style="background-image:url(<?php echo get_field("fondo_hero")["url"] ?>);">
-    <div class="container min-h-[inherit]">
-        <div class="grid grid-cols-2 py-10 min-h-[inherit]">
+    <div class="containerc min-h-[inherit]">
+        <div class="grid grid-cols-1 laptop:grid-cols-2 py-10 min-h-[inherit]">
             <div class="flex items-center">
                 <div class="flex flex-col gap-4 items-start text-white">
-                    <h1 class="text-[57px] leading-[84px] uppercase font-gordita-black">
+                    <h1 class="text-57 uppercase font-gordita-black">
                         <?php echo get_field('titulo_hero') ?>
                     </h1>
                     <div class="bg-[#0097B2] px-4 py-2 rounded-md font-gordita-medium">
-                        <p class="text-[29px] leading-[34px] max-w-[470px]">
+                        <p class="text-30 max-w-[424px] desktop-middle:max-w-[470px]">
                             <?php echo get_field('descripcion_hero') ?>
                         </p>
                     </div>
                 </div>
             </div>
             <div class="relative">
-                <div class="absolute right-[-8%] z-[1] overflow-hidden">
+                <div class="absolute right-0 laptop:right-[-8%] z-[1] overflow-hidden">
                     <div id="initial-top-hero">
                         <div
-                            class="w-[600px] h-[400px] [&>img]:w-full [&>img]:h-full [&>img]:object-cover [&>img]:absolute [&>img]:left-0 [&>img]:top-0 relative">
+                            class="w-[230] h-[160px] laptop:w-[400px] laptop:h-[250px] desktop-middle:w-[500px] desktop-middle:h-[300px] desktop-large:w-[600px] desktop-large:h-[400px] [&>img]:w-full [&>img]:h-full [&>img]:object-cover [&>img]:absolute [&>img]:left-0 [&>img]:top-0 relative">
                             <?php if (have_rows('imagenes_hero')):
                                 while (have_rows('imagenes_hero')):
                                     the_row(); ?>
@@ -41,7 +41,7 @@ get_header();
                                 <?php endwhile; endif; ?>
                         </div>
                         <p
-                            class="uppercase text-white font-gordita-black text-[28px] leading-[33px] px-8 py-7 bg-blue inline-flex absolute bottom-[16%]">
+                            class="uppercase text-white font-gordita-black  text-25 px-3 py-4 desktop:px-6 desktop:py-5 bg-blue inline-flex absolute bottom-[16%]">
                             <?php if (have_rows('imagenes_hero')):
                                 while (have_rows('imagenes_hero')):
                                     the_row(); ?>
@@ -54,10 +54,10 @@ get_header();
                         </p>
                     </div>
                 </div>
-                <div class="absolute bottom-0 left-[-5%] overflow-hidden">
+                <div class="absolute bottom-0 left-0 laptop:left-[-5%] overflow-hidden">
                     <div id="initial-bottom-hero">
                         <div
-                            class="w-[600px] h-[400px] [&>img]:w-full [&>img]:h-full [&>img]:object-cover [&>img]:absolute [&>img]:left-0 [&>img]:top-0 relative">
+                            class="w-[230px] h-[160px] laptop:w-[400px] laptop:h-[250px] desktop-middle:w-[500px] desktop-middle:h-[300px] desktop-large:w-[600px] desktop-large:h-[400px] [&>img]:w-full [&>img]:h-full [&>img]:object-cover [&>img]:absolute [&>img]:left-0 [&>img]:top-0 relative">
                             <?php if (have_rows('imagenes_hero')):
                                 while (have_rows('imagenes_hero')):
                                     the_row(); ?>
@@ -72,7 +72,7 @@ get_header();
                                 <?php endwhile; endif; ?>
                         </div>
                         <p
-                            class="uppercase text-white font-gordita-black text-[28px] leading-[33px] px-8 py-7 bg-blue absolute bottom-[16%]">
+                            class="uppercase text-white font-gordita-black desktop-large:text-[28px] desktop-large:leading-[33px] px-3 py-4 desktop:px-6 desktop:py-5 bg-blue absolute bottom-[16%]">
                             <?php if (have_rows('imagenes_hero')):
                                 while (have_rows('imagenes_hero')):
                                     the_row(); ?>
@@ -91,10 +91,10 @@ get_header();
 </div>
 
 <section class="bg-white page-section overflow-x-hidden wow animate__animated animate__fadeIn" data-wow-duration="1s">
-    <div class="container">
-        <div class="flex justify-between">
-            <div class="flex items-center w-[40%] wow animate__animated animate__backInLeft" data-wow-duration="1s">
-                <div class="flex flex-col">
+    <div class="containerc">
+        <div class="flex justify-between flex-col laptop:flex-row gap-8 laptop:gap-0">
+            <div class="flex items-center laptop:w-[40%] wow animate__animated animate__backInLeft" data-wow-duration="1s">
+                <div class="flex flex-col items-center text-center laptop:items-start laptop:text-left">
                     <?php if (!empty(get_field("titulo_qs"))) : ?>
                     <h2 class="section-title">
                         <?php echo get_field("titulo_qs") ?>
@@ -112,7 +112,7 @@ get_header();
                 </div>
             </div>
             <?php if (!empty(get_field("imagen_qs"))) : ?>
-            <div class="flex items-center justify-center relative w-[45%] wow animate__animated animate__backInRight"
+            <div class="flex items-center justify-center relative laptop:w-[45%] wow animate__animated animate__backInRight"
                 data-wow-duration="1s">
                 <div class="bg-celeste-50 absolute left-[-20px] top-[20px] h-full w-full rounded-xl"></div>
                 <img src="<?php echo get_field("imagen_qs")["url"] ?>" 
@@ -140,7 +140,7 @@ $wp_query = new WP_Query(
 
 <?php if (have_posts()): ?>
     <section class="page-section bg-[#F2F2F2] wow animate__animated animate__fadeIn" data-wow-duration="1s">
-        <div class="container">
+        <div class="containerc">
             <div class="flex flex-col gap-8">
                 <div class="max-w-[1088px] w-full mx-auto text-center mb-8">
                     <?php if (!empty(get_field("titulo_ser"))) : ?>
@@ -158,27 +158,27 @@ $wp_query = new WP_Query(
                 <!-- <div
                 id="servicios"
                 class="grid grid-cols-4 gap-10 [&>div>div>p]:text-[20px] [&>article]:h-[364px] [&>article>img]:h-full [&>article>img]:w-full [&>article>img]:object-cover [&>article>img]:object-top [&>article]:rounded-xl [&>article]:overflow-hidden [&>article]:shadow-custom [&>article>div]:absolute [&>article>div]:bottom-0 [&>article]:relative services"> -->
-                <div class="splide custom-splide" aria-label="Servicios" id="servicios">
+                <div class="splide custom-splide px-9 desktop-middle:px-0" aria-label="Servicios" id="servicios">
                     <div class="splide__track">
                         <ul class="splide__list">
                             <?php while (have_posts()):
                                 the_post(); ?>
                                 <li
-                                    class="splide__slide [&>div>div>p]:text-[20px] [&>article]:h-[364px] [&>article>img]:h-full [&>article>img]:w-full [&>article>img]:object-cover [&>article>img]:object-top [&>article]:rounded-xl [&>article]:overflow-hidden [&>article]:shadow-custom [&>article>div]:absolute [&>article>div]:bottom-0 [&>article]:relative">
+                                    class="splide__slide [&>div>div>p]:text-[20px] [&>article]:h-[300px] desktop:[&>article]:h-[364px] [&>article>img]:h-full [&>article>img]:w-full [&>article>img]:object-cover [&>article>img]:object-top [&>article]:rounded-xl [&>article]:overflow-hidden [&>article]:shadow-custom [&>article>div]:absolute [&>article>div]:bottom-0 [&>article]:relative">
                                     <article class="flex flex-col services__item">
                                         <?php
                                         $thumbID = get_post_thumbnail_id($post->ID);
                                         $imgDestacada = wp_get_attachment_image_src($thumbID, 'thumbnail');
                                         echo '<img src="' . $imgDestacada[0] . '" alt="' . get_the_title() . '" title="' . get_the_title() . '">';
                                         ?>
-                                        <div class="px-6 py-4 h-[105px] relative services__content">
+                                        <div class="px-6 py-4 h-[105px] relative services__content w-full">
                                             <div
                                                 class="from-[#1F4690] to-[#000000] flex-grow opacity-90 absolute h-full w-full left-0 top-0 bg-gradient-to-b services__bg">
                                             </div>
                                             <div class="relative z-[1]">
                                                 <div class="flex items-center justify-center">
                                                     <h3
-                                                        class="text-white font-gordita-bold text-center line-clamp-3 text-[20px] leading-[25px]">
+                                                        class="text-white font-gordita-bold text-center line-clamp-3 text-20">
                                                         <?php echo get_the_title(); ?>
                                                     </h3>
                                                 </div>
@@ -212,10 +212,10 @@ $wp_query = new WP_Query(
 
 <?php if(have_rows('lista_de_capacitaciones')): ?>
 <section class="page-section bg-[#F2F2F2] wow animate__animated animate__fadeIn" data-wow-duration="1s">
-    <div class="container">
-        <div class="grid grid-cols-[510px_auto] gap-32">
+    <div class="containerc">
+        <div class="grid grid-cols-1 gap-8 laptop:grid-cols-[510px_auto] laptop:gap-16 desktop-large:gap-32">
             <div class="flex items-end">
-                <div class="flex flex-col">
+                <div class="flex flex-col text-center laptop:text-left">
                     <?php if (!empty(get_field("titulo_ca"))) : ?>
                     <h2 class="section-title section-title--celeste"><?php echo get_field('titulo_ca') ?></h2>
                     <?php endif; ?>
@@ -245,7 +245,7 @@ $wp_query = new WP_Query(
                                     >
                                     <div class="p-4 bg-white flex-grow">
                                         <h3
-                                            class="text-[1.25rem] leading-[1.563rem] mb-4 text-blue font-gordita-bold line-clamp-2">
+                                            class="text-20 mb-4 text-blue font-gordita-bold line-clamp-2">
                                             <?php echo get_sub_field('titulo_capa'); ?>
                                         </h3>
                                         <p class="text-[1.125rem] text-celeste-50 mb-4"><?php echo get_sub_field('descripcion_capa'); ?></p>
@@ -266,7 +266,7 @@ $wp_query = new WP_Query(
 <?php endif; ?>
 
 <section class="page-section bg-[#FFFFFF] wow animate__animated animate__fadeIn" data-wow-duration="1s">
-    <div class="container">
+    <div class="containerc">
         <div class="max-w-3xl mx-auto text-center mb-12">
             <?php if (!empty(get_field("titulo_bl"))) : ?>
             <h2 class="section-title"><?php echo get_field('titulo_bl') ?></h2>
