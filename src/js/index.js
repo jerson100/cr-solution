@@ -9,12 +9,13 @@ import tiendaPage from "./pages/tienda";
 import verificacionPage from "./pages/verificacion";
 import servicesPage from "./pages/services";
 import { onHeightAnimation } from "./utils/header";
+import { sliderBajoEstandares } from "./utils/footer";
 // import { addWowAnimation } from "./utils/reveal";
 
 (() => {
   window.addEventListener("DOMContentLoaded", () => {
-    // addWowAnimation();
     onHeightAnimation(300);
+    sliderBajoEstandares();
     onHandleModals();
     mainPage();
     graciasPage();

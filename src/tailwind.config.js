@@ -3,11 +3,26 @@ module.exports = {
   //   content: ["../**/*.{php,html,js}"],
   content: ["../**/*.{html,js}", "../page-template/**/*.php", "../**/*.php"],
   theme: {
+    screens: {
+      tablet: "640px",
+      // => @media (min-width: 640px) { ... }
+
+      "tablet-middle": "768px",
+      // => @media (min-width: 768px) { ... }
+
+      laptop: "1024px",
+      // => @media (min-width: 1024px) { ... }
+
+      desktop: "1280px",
+      // => @media (min-width: 1280px) { ... }
+
+      "desktop-middle": "1440px",
+      // => @media (min-width: 1440px) { ... }
+
+      "desktop-large": "1600px",
+      // => @media (min-width: 1600px) { ... }
+    },
     extend: {
-      screens: {
-        desktop: "1500px",
-        // => @media (min-width: 1500px) { ... }
-      },
       gridTemplateColumns: {
         fluid: "repeat(auto-fit, minmax(420px, 1fr))",
       },
