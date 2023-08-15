@@ -39,29 +39,30 @@ $terms = get_terms(
 
 ?>
 
-<?php if (have_posts()) : ?>
-    <section class="page-section">
-        <div class="container">
-            <div class="mb-14">
-                <h2 class="section-title text-center max-w-[850px] mx-auto">
-                    ¿Quieres llevar la eficiencia de tu trabajo en SST al siguiente nivel?
-                </h2>
-                <p class="text-25 font-gordita-regular text-center text-text-primary">
-                    Descubre nuestras plantillas gratuitas descargables y optimiza tus procesos de forma instantánea.
-                </p>
+
+<section class="page-section">
+    <div class="container">
+        <div class="mb-14">
+            <h2 class="section-title text-center max-w-[850px] mx-auto">
+                ¿Quieres llevar la eficiencia de tu trabajo en SST al siguiente nivel?
+            </h2>
+            <p class="text-25 font-gordita-regular text-center text-text-primary">
+                Descubre nuestras plantillas gratuitas descargables y optimiza tus procesos de forma instantánea.
+            </p>
+        </div>
+        <?php if (!empty($terms) && !is_wp_error($terms)) : ?>
+            <div class="flex bg-[#F2F2F2] px-20 py-3 mb-14">
+                <ul class="flex items-center flex-wrap gap-y-4 justify-center">
+                    <a href="<?php echo esc_url(home_url('plantillas')) ?>" class="button button--rounded-md button-size-md">Todos</a>
+                    <?php foreach ($terms as $term) : ?>
+                        <li>
+                            <a href="<?php echo get_term_link($term); ?>" class="text-celeste-100 text-22 font-gordita-regular py-[8px] px-[25px]"><?php echo $term->name; ?></a>
+                        </li>
+                    <?php endforeach; ?>
+                </ul>
             </div>
-            <?php if (!empty($terms) && !is_wp_error($terms)) : ?>
-                <div class="flex bg-[#F2F2F2] px-20 py-3 mb-14">
-                    <ul class="flex items-center flex-wrap gap-y-4 justify-center">
-                        <a href="<?php echo esc_url(home_url('plantillas')) ?>" class="button button--rounded-md button-size-md">Todos</a>
-                        <?php foreach ($terms as $term) : ?>
-                            <li>
-                                <a href="<?php echo get_term_link($term); ?>" class="text-celeste-100 text-22 font-gordita-regular py-[8px] px-[25px]"><?php echo $term->name; ?></a>
-                            </li>
-                        <?php endforeach; ?>
-                    </ul>
-                </div>
-            <?php endif; ?>
+        <?php endif; ?>
+        <?php if (have_posts()) : ?>
             <ul class="grid grid-cols-3 gap-10">
                 <?php $f = 0; ?>
                 <?php while (have_posts()) : the_post(); ?>
@@ -139,9 +140,12 @@ $terms = get_terms(
                     </li>
                 <?php endwhile; ?>
             </ul>
-        </div>
-    </section>
-<?php endif; ?>
+        <?php else : ?>
+            <br><br>
+            <p class="text-20 font-gordita-regular text-center text-text-primary">No se han encontrado plantillas para esta categoría</p>
+        <?php endif; ?>
+    </div>
+</section>
 
 
 <?php get_footer(); ?>
