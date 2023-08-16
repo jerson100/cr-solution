@@ -4,10 +4,15 @@ get_header();
 ?>
 
 <div class="screen-top relative">
-    <img src="<?php echo get_field("fondo_pagina_plantillas")["url"] ?>" alt="<?php echo get_field("fondo_pagina_plantillas")["alt"] ?>" width="<?php echo get_field("fondo_pagina_plantillas")["width"] ?>" height="<?php echo get_field("fondo_pagina_plantillas")["height"] ?>" class="w-full h-full object-cover absolute left-0 top-0 z-[1]" />
-    <div class="container">
-        <div class="max-w-[85%] w-full min-h-[264px] py-12 flex items-center justify-start">
-            <h1 class="section-title section-title--white z-[2] relative text-white-150">
+    <img src="<?php echo get_field("fondo_pagina_plantillas")["url"] ?>"
+        alt="<?php echo get_field("fondo_pagina_plantillas")["alt"] ?>"
+        width="<?php echo get_field("fondo_pagina_plantillas")["width"] ?>"
+        height="<?php echo get_field("fondo_pagina_plantillas")["height"] ?>"
+        class="w-full h-full object-cover absolute left-0 top-0 z-[1] object-right" />
+    <div class="containerc">
+        <div
+            class="laptop:max-w-[85%] w-full min-h-[160px] py-4 tablet:min-h-[200px] laptop:min-h-[230px] desktop-large:min-h-[264px] laptop:py-12 flex items-center justify-start">
+            <h1 class="section-title section-title--white z-[2] relative text-white-150 margin-b-0">
                 <?php echo get_field("titulo_pagina_plantillas") ?>
             </h1>
         </div>
@@ -37,34 +42,38 @@ $terms = get_terms(
 
 
 <section class="page-section">
-    <div class="container">
+    <div class="containerc">
         <div class="mb-14">
-            <h2 class="section-title text-center max-w-[850px] mx-auto">
+            <h2 class="section-title text-center max-w-[530px] desktop-middle:max-w-[850px] mx-auto">
                 <?php echo get_field("titulo_seccion_plantillas_page") ?>
             </h2>
             <p class="text-25 font-gordita-regular text-center text-text-primary">
                 <?php echo get_field("descripcion_seccion_plantillas_page") ?>
             </p>
         </div>
-        <?php if (!empty($terms) && !is_wp_error($terms)) : ?>
-            <div class="flex bg-[#F2F2F2] px-20 py-3 mb-14">
+        <?php if (!empty($terms) && !is_wp_error($terms)): ?>
+            <div class="flex bg-[#F2F2F2] px-4 tablet-middle:px-20 py-3 mb-14">
                 <ul class="flex items-center flex-wrap gap-y-4 justify-center">
-                    <a href="<?php echo esc_url(home_url('plantillas')) ?>" class="button button--rounded-md button-size-md">Todos</a>
-                    <?php foreach ($terms as $term) : ?>
-                        <li>
-                            <a href="<?php echo get_term_link($term); ?>" class="text-celeste-100 text-22 font-gordita-regular py-[8px] px-[25px]"><?php echo $term->name; ?></a>
+                    <a href="<?php echo esc_url(home_url('plantillas')) ?>"
+                        class="button button--rounded-md button-size-md">Todos</a>
+                    <?php foreach ($terms as $term): ?>
+                        <li class="flex items-center justify-center">
+                            <a href="<?php echo get_term_link($term); ?>"
+                                class="text-celeste-100 text-22 text-center font-gordita-regular py-[8px] px-[25px]"><?php echo $term->name; ?></a>
                         </li>
                     <?php endforeach; ?>
                 </ul>
             </div>
         <?php endif; ?>
-        <?php if (have_posts()) : ?>
-            <ul class="grid grid-cols-3 gap-10">
+        <?php if (have_posts()): ?>
+            <ul class="grid grid-cols-1 tablet-middle:grid-cols-2 laptop:grid-cols-3 gap-8 laptop:gap-10">
                 <?php $f = 0; ?>
-                <?php while (have_posts()) : the_post(); ?>
+                <?php while (have_posts()):
+                    the_post(); ?>
                     <li data-category="" class="rounded-lg bg-[#313131] flex flex-col">
-                        <div class="h-[264px] rounded-t-lg"></div>
-                        <div class="flex justify-between items-center gap-4 shadow-custom px-8 py-4 rounded-lg bg-white-150 flex-grow">
+                        <div class="h-[220px] desktop-middle:h-[264px] rounded-t-lg"></div>
+                        <div
+                            class="flex justify-between items-center gap-4 shadow-custom px-4 py-3 desktop-middle:px-8 desktop-middle:py-4 rounded-lg bg-white-150 flex-grow">
                             <h3 class="font-gordita-bold flex-shrink text-22 line-clamp-2">
                                 <?php echo get_the_title(); ?>
                             </h3>
@@ -75,8 +84,12 @@ $terms = get_terms(
                                     </svg>
                                 </button> -->
                                 <button class="flex-shrink-0 .dowmload-button" data-modal-target="plantilla_<?php echo $f; ?>">
-                                    <svg id="Componente_10_1" data-name="Componente 10 – 1" xmlns="http://www.w3.org/2000/svg" width="48.291" height="46.345" viewBox="0 0 48.291 46.345">
-                                        <path id="Trazado_9" data-name="Trazado 9" d="M44.717,59.2a2.03,2.03,0,0,0,2.032-2.032V44.591h4.842V57.474a6.568,6.568,0,0,1-6.571,6.571H9.871A6.568,6.568,0,0,1,3.3,57.474V44.591H8.142V57.171A2.03,2.03,0,0,0,10.174,59.2Zm-26.8-41.5H36.892V34.69h7.263L27.424,51.032,10.693,34.69h7.263V17.7Z" transform="translate(-3.3 -17.7)" fill="#1f4690" />
+                                    <svg class="w-7 laptop:w-8 desktop-middle:w-9 desktop-large:w-[auto]" id="Componente_10_1"
+                                        data-name="Componente 10 – 1" xmlns="http://www.w3.org/2000/svg" width="48.291"
+                                        height="46.345" viewBox="0 0 48.291 46.345">
+                                        <path id="Trazado_9" data-name="Trazado 9"
+                                            d="M44.717,59.2a2.03,2.03,0,0,0,2.032-2.032V44.591h4.842V57.474a6.568,6.568,0,0,1-6.571,6.571H9.871A6.568,6.568,0,0,1,3.3,57.474V44.591H8.142V57.171A2.03,2.03,0,0,0,10.174,59.2Zm-26.8-41.5H36.892V34.69h7.263L27.424,51.032,10.693,34.69h7.263V17.7Z"
+                                            transform="translate(-3.3 -17.7)" fill="#1f4690" />
                                     </svg>
                                 </button>
                             </div>
@@ -117,13 +130,22 @@ $terms = get_terms(
                                                 </div>
                                                 <div class="shadow-custom bg-[#D9D9D9] p-10 rounded-[10px]">
                                                     <div class="bg-[#8E8E8E] rounded-[15px] h-[247px] mb-6 shadow-custom"></div>
-                                                    <h2 class="font-gordita-bold text-20 text-blue mb-6"><?php echo get_the_title(); ?></h2>
+                                                    <h2 class="font-gordita-bold text-20 text-blue mb-6">
+                                                        <?php echo get_the_title(); ?>
+                                                    </h2>
                                                     <form action="" class="grid grid-rows-3 gap-4 modal-plantillas-form">
-                                                        <input class="px-6 py-3 w-full rounded-[10px] text-celeste-100 text-18 font-gordita-regular bg-white" placeholder="Nombres y Apellidos" />
-                                                        <input class="px-6 py-3 w-full rounded-[10px] text-celeste-100 text-18 font-gordita-regular bg-white" placeholder="Correo Electrónico" />
-                                                        <input class="px-6 py-3 w-full rounded-[10px] text-celeste-100 text-18 font-gordita-regular bg-white" placeholder="Número de celular" />
+                                                        <input
+                                                            class="px-6 py-3 w-full rounded-[10px] text-celeste-100 text-18 font-gordita-regular bg-white"
+                                                            placeholder="Nombres y Apellidos" />
+                                                        <input
+                                                            class="px-6 py-3 w-full rounded-[10px] text-celeste-100 text-18 font-gordita-regular bg-white"
+                                                            placeholder="Correo Electrónico" />
+                                                        <input
+                                                            class="px-6 py-3 w-full rounded-[10px] text-celeste-100 text-18 font-gordita-regular bg-white"
+                                                            placeholder="Número de celular" />
                                                         <div class="flex justify-center mt-4">
-                                                            <a href="<?php the_permalink() ?>" type="submit" class="button">Descargar Plantilla Gratis</a>
+                                                            <a href="<?php the_permalink() ?>" type="submit"
+                                                                class="button">Descargar Plantilla Gratis</a>
                                                         </div>
                                                     </form>
                                                 </div>
@@ -134,10 +156,10 @@ $terms = get_terms(
                             </div>
                         </div>
                     </li>
-                <?php $f++;
+                    <?php $f++;
                 endwhile; ?>
             </ul>
-        <?php else : ?>
+        <?php else: ?>
             <br><br>
             <p class="text-20 font-gordita-regular text-center text-text-primary">No se han encontrado plantillas</p>
         <?php endif; ?>

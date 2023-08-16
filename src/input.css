@@ -448,7 +448,8 @@ body {
 }
 
 .text-25,
-.content-editor p {
+.content-editor p,
+.button-size-md {
   font-size: 1.015rem;
   line-height: 1.422rem;
 }
@@ -543,7 +544,8 @@ body {
   }
 
   .text-25,
-  .content-editor p {
+  .content-editor p,
+  .button-size-md {
     font-size: calc(1.015rem + 0.3125 * ((100vw - 640px) / 960));
     line-height: calc(1.422rem + 0.1875 * ((100vw - 640px) / 960));
   }
@@ -593,7 +595,8 @@ body {
   }
 
   .text-25,
-  .content-editor p {
+  .content-editor p,
+  .button-size-md {
     font-size: calc(1.015rem + 0.125 * ((100vw - 1024px) / 2816));
     line-height: calc(1.422rem + 0.135 * ((100vw - 1024px) / 2816));
   }
@@ -643,7 +646,8 @@ body {
   }
 
   .text-25,
-  .content-editor p {
+  .content-editor p,
+  .button-size-md {
     font-size: calc(1.015rem + 0.125 * ((100vw - 1280px) / 3584));
     line-height: calc(1.422rem + 0.135 * ((100vw - 1280px) / 3584));
   }
@@ -693,7 +697,8 @@ body {
   }
 
   .text-25,
-  .content-editor p {
+  .content-editor p,
+  .button-size-md {
     font-size: calc(1.015rem + 0.125 * ((100vw - 1440px) / 3840));
     line-height: calc(1.422rem + 0.135 * ((100vw - 1440px) / 3840));
   }
@@ -743,7 +748,8 @@ body {
   }
 
   .text-25,
-  .content-editor p {
+  .content-editor p,
+  .button-size-md {
     font-size: 1.563rem;
     line-height: 2.188rem;
   }
@@ -789,11 +795,6 @@ body {
 
 .button--rounded-xs {
   border-radius: 0.3125rem;
-}
-
-.button-size-md {
-  font-size: 1.563rem;
-  line-height: 2.1875rem;
 }
 
 .button-custom:hover .button-custom__icon {
