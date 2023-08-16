@@ -426,7 +426,8 @@ body {
   line-height: 1.313rem;
 }
 
-.text-22 {
+.text-22,
+.verification__description ul li {
   font-size: 0.875rem;
   line-height: 1.125rem;
 }
@@ -520,7 +521,8 @@ body {
     line-height: calc(1.313rem + 0.2125 * ((100vw - 640px) / 960));
   }
 
-  .text-22 {
+  .text-22,
+  .verification__description ul li {
     font-size: calc(0.875rem + 0.25 * ((100vw - 640px) / 960));
     line-height: calc(1.125rem + 0.125 * ((100vw - 640px) / 960));
   }
@@ -569,7 +571,8 @@ body {
     line-height: calc(1.313rem + 0.135 * ((100vw - 1024px) / 2816));
   }
 
-  .text-22 {
+  .text-22,
+  .verification__description ul li {
     font-size: calc(0.875rem + 0.175 * ((100vw - 1024px) / 2816));
     line-height: calc(1.125rem + 0.1125 * ((100vw - 1024px) / 2816));
   }
@@ -618,7 +621,8 @@ body {
     line-height: calc(1.313rem + 0.135 * ((100vw - 1280px) / 3584));
   }
 
-  .text-22 {
+  .text-22,
+  .verification__description ul li {
     font-size: calc(0.875rem + 0.175 * ((100vw - 1280px) / 3584));
     line-height: calc(1.125rem + 0.1125 * ((100vw - 1280px) / 3584));
   }
@@ -667,7 +671,8 @@ body {
     line-height: calc(1.313rem + 0.135 * ((100vw - 1440px) / 3840));
   }
 
-  .text-22 {
+  .text-22,
+  .verification__description ul li {
     font-size: calc(0.875rem + 0.175 * ((100vw - 1440px) / 3840));
     line-height: calc(1.125rem + 0.1125 * ((100vw - 1440px) / 3840));
   }
@@ -716,7 +721,8 @@ body {
     line-height: 2.063rem;
   }
 
-  .text-22 {
+  .text-22,
+  .verification__description ul li {
     font-size: 1.375rem;
     line-height: 1.75rem;
   }
@@ -1076,8 +1082,6 @@ header li:hover > ul {
 .verification__description ul li {
   list-style: disc;
   margin-left: 20px;
-  font-size: 22px;
-  line-height: 30px;
   font-family: "Gordita Regular";
 }
 

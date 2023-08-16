@@ -9,7 +9,8 @@ $ID = intval(get_the_ID());
 
 ?>
 <div class="screen-top relative">
-    <img src="<?php echo IMG ?>/Blog/Banners-4.jpg" class="w-full h-full object-cover absolute left-0 top-0 z-[1]" />
+    <img src="<?php echo IMG ?>/Blog/Banners-4.jpg"
+        class="w-full h-full object-cover absolute left-0 top-0 z-[1] object-right" />
     <div class="containerc">
         <div
             class="laptop:max-w-[85%] w-full min-h-[160px] py-4 tablet:min-h-[200px] laptop:min-h-[230px] desktop-large:min-h-[264px] laptop:py-12 flex items-center justify-start">

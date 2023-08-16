@@ -11,24 +11,26 @@ get_header();
         title="<?php echo get_field("fondo_verificacion_page")["alt"] ?>"
         width="<?php echo get_field("fondo_verificacion_page")["width"] ?>"
         height="<?php echo get_field("fondo_verificacion_page")["height"] ?>"
-        class="w-full h-full object-cover absolute left-0 top-0 z-[1]" />
-    <div class="container">
-        <div class="max-w-[85%] w-full min-h-[264px] py-12 flex items-center justify-start">
-            <h1 class="section-title section-title--xl section-title--white z-[2] relative text-white-150">
+        class="w-full h-full object-cover absolute left-0 top-0 z-[1] object-right" />
+    <div class="containerc">
+        <div
+            class="laptop:max-w-[85%] w-full min-h-[160px] py-4 tablet:min-h-[200px] laptop:min-h-[230px] desktop-large:min-h-[264px] laptop:py-12 flex items-center justify-start">
+            <h1 class="section-title section-title--white z-[2] relative text-white-150 margin-b-0">
                 <?php echo get_field("titulo_verificacion_page") ?>
             </h1>
         </div>
     </div>
 </div>
 <div class="page-section page-section--sm">
-    <div class="container">
+    <div class="containerc">
         <div
-            class="pl-[71px] pt-[163px] pb-[61px] pr-[135px] from-[#1F4690] to-[#0D1C39] bg-gradient-to-b rounded-[20px]">
-            <div class="grid grid-cols-2 gap-[119px] mb-36">
+            class="pl-4 pt-8 pb-6 pr-6 laptop:pl-14 laptop:pt-32 laptop:pb-10 laptop:pr-20 desktop-middle:pl-[71px] desktop-middle:pt-[163px] desktop-middle:pb-[61px] desktop-middle:pr-[135px] from-[#1F4690] to-[#0D1C39] bg-gradient-to-b rounded-[20px]">
+            <div
+                class="grid-cols-1 gap-8 mb-12 grid laptop:grid-cols-2 laptop:gap-8 desktop-large:gap-[119px] laptop:mb-36">
                 <div class="flex items-center">
                     <div
-                        class="flex gap-4 items-center h-[61px] bg-white px-5 py-1 rounded-[10px] w-full self-end -translate-y-[60%] focus-within:flex-row-reverse">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="39.333" height="39.333"
+                        class="flex gap-8 items-center h-[42px] desktop-middle:h-[61px] bg-white px-5 py-1 rounded-[10px] w-full self-end laptop:-translate-y-[60%] focus-within:flex-row-reverse">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-[74%]  width=" 39.333" height="39.333"
                             viewBox="0 0 39.333 39.333">
                             <g id="magnifier-1_icon-icons.com_56924_1_" data-name="magnifier-1_icon-icons.com_56924 (1)"
                                 transform="translate(-0.001)">
@@ -56,29 +58,29 @@ get_header();
             <div class="flex justify-center mb-[60px]">
                 <button class="button" id="btn-aceptar-verificacion">Aceptar</button>
             </div>
-            <div class="grid-cols-[1fr_auto] max-w-[1018px] mx-auto rounded-[20px] bg-[#D9D9D9] px-[51px] py-[56px] gap-[91px] hidden"
+            <div class="grid-cols-1 tablet-middle:grid-cols-[1fr_auto] max-w-[1018px] mx-auto rounded-[20px] bg-[#D9D9D9] px-[41px] py-[46px] desktop:px-[51px] desktop:py-[56px] gap-8 desktop:gap-12 desktop-middle:gap-[91px] hidden"
                 id="details-form">
-                <form class="flex flex-col gap-4">
+                <form class="flex flex-col gap-4 order-2 tablet-middle:order-1">
                     <input type="text"
-                        class="font-gordita-regular text-18 leading-[30px] text-celeste-100 h-[51px] bg-white placeholder:text-celeste-100 rounded-[15px] px-7 py-4 w-full block"
+                        class="font-gordita-regular text-18 leading-[30px] text-celeste-100 h-[42px] desktop-middle:h-[51px] bg-white placeholder:text-celeste-100 rounded-[15px] px-7 py-4 w-full block"
                         placeholder="Correo Electrónico" />
                     <input type="text"
-                        class="font-gordita-regular text-18 leading-[30px] text-celeste-100 h-[51px] bg-white placeholder:text-celeste-100 rounded-[15px] px-7 py-4 w-full block"
+                        class="font-gordita-regular text-18 leading-[30px] text-celeste-100 h-[42px] desktop-middle:h-[51px] bg-white placeholder:text-celeste-100 rounded-[15px] px-7 py-4 w-full block"
                         placeholder="Nombre" />
                     <input type="text"
-                        class="font-gordita-regular text-18 leading-[30px] text-celeste-100 h-[51px] bg-white placeholder:text-celeste-100 rounded-[15px] px-7 py-4 w-full block"
+                        class="font-gordita-regular text-18 leading-[30px] text-celeste-100 h-[42px] desktop-middle:h-[51px] bg-white placeholder:text-celeste-100 rounded-[15px] px-7 py-4 w-full block"
                         placeholder="Fecha" />
                     <input type="text"
-                        class="font-gordita-regular text-18 leading-[30px] text-celeste-100 h-[51px] bg-white placeholder:text-celeste-100 rounded-[15px] px-7 py-4 w-full block"
+                        class="font-gordita-regular text-18 leading-[30px] text-celeste-100 h-[42px] desktop-middle:h-[51px] bg-white placeholder:text-celeste-100 rounded-[15px] px-7 py-4 w-full block"
                         placeholder="Capacitación" />
                     <input type="text"
-                        class="font-gordita-regular text-18 leading-[30px] text-celeste-100 h-[51px] bg-white placeholder:text-celeste-100 rounded-[15px] px-7 py-4 w-full block"
+                        class="font-gordita-regular text-18 leading-[30px] text-celeste-100 h-[42px] desktop-middle:h-[51px] bg-white placeholder:text-celeste-100 rounded-[15px] px-7 py-4 w-full block"
                         placeholder="Vigencia" />
                     <div class="flex justify-center">
                         <button class="button">Descargar certificado</button>
                     </div>
                 </form>
-                <div class="flex items-center">
+                <div class="flex items-center order-1 tablet-middle:order-2 justify-center tablet-middle:justify-start">
                     <div class="w-[330px] h-[330px] bg-[#313131] rounded-[20px]"></div>
                 </div>
             </div>
