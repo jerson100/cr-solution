@@ -304,7 +304,7 @@ $wp_query = new WP_Query(
                                             <span>-</span>
                                         </ul>
                                         <div
-                                            class="w-full h-[317px] relative [&>img]:object-cover [&>img]:object-center [&>img]:absolute [&>img]:left-0 [&>img]:right-0 [&>img]:w-full [&>img]:h-full">
+                                            class="w-full h-[220px] desktop-large:h-[317px] relative [&>img]:object-cover [&>img]:object-center [&>img]:absolute [&>img]:left-0 [&>img]:right-0 [&>img]:w-full [&>img]:h-full">
                                             <?php if (has_post_thumbnail()): ?>
                                                 <?php echo get_the_post_thumbnail() ?>
                                             <?php endif; ?>

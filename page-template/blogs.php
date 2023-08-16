@@ -8,15 +8,17 @@ get_header();
 ?>
 
 
+
 <div class="screen-top relative">
     <img src="<?php echo get_field("fondo_hero_blogs_page")["url"] ?>"
         alt="<?php echo get_field("fondo_hero_blogs_page")["alt"] ?>"
         width="<?php echo get_field("fondo_hero_blogs_page")["width"] ?>"
         height="<?php echo get_field("fondo_hero_blogs_page")["height"] ?>"
-        class="w-full h-full object-cover absolute left-0 top-0 z-[1]" />
-    <div class="container">
-        <div class="max-w-[85%] w-full min-h-[264px] py-12 flex items-center justify-start">
-            <h1 class="section-title section-title--white z-[2] relative text-white-150">
+        class="w-full h-full object-cover absolute left-0 top-0 z-[1] object-right" />
+    <div class="containerc">
+        <div
+            class="laptop:max-w-[85%] w-full min-h-[160px] py-4 tablet:min-h-[200px] laptop:min-h-[230px] desktop-large:min-h-[264px] laptop:py-12 flex items-center justify-start">
+            <h1 class="section-title section-title--white z-[2] relative text-white-150 margin-b-0">
                 <?php echo get_field("titulo_hero_blogs_page") ?>
             </h1>
         </div>
@@ -36,13 +38,13 @@ $wp_query = new WP_Query(
 ?>
 
 <div class="page-section">
-    <div class="container">
+    <div class="containerc">
         <div class="mx-auto max-w-[728px] flex justify-center mb-16">
             <p class="text-text-primary text-25 font-gordita-regular">
                 <?php echo get_field("descripcion_blogs_page") ?>
             </p>
         </div>
-        <ul class="grid grid-cols-3 gap-4">
+        <ul class="grid grid-cols-1 tablet-middle:grid-cols-2 laptop:grid-cols-3 gap-4">
             <?php if (have_posts()):
                 while (have_posts()):
                     the_post(); ?>
@@ -53,7 +55,8 @@ $wp_query = new WP_Query(
                                     <span>+</span>
                                     <span>-</span>
                                 </ul>
-                                <div class="[&>img]:w-full [&>img]:h-[317px] [&>img]:object-cover [&>img]:object-center">
+                                <div
+                                    class="[&>img]:w-full [&>img]:h-[220px] desktop-large:[&>img]:h-[317px] [&>img]:object-cover [&>img]:object-center">
                                     <?php if (has_post_thumbnail()): ?>
                                         <?php echo get_the_post_thumbnail() ?>
                                     <?php endif; ?>

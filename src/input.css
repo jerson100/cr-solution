@@ -446,7 +446,8 @@ body {
   line-height: 1.172rem;
 }
 
-.text-25 {
+.text-25,
+.content-editor p {
   font-size: 1.015rem;
   line-height: 1.422rem;
 }
@@ -464,6 +465,12 @@ body {
 .text-57 {
   font-size: 1.6rem;
   line-height: 2.33rem;
+}
+
+.text-40,
+.content-editor h2 {
+  font-size: 1.5rem; /* Tamaño base */
+  line-height: 2.25rem; /* Altura de línea base */
 }
 
 /* Breakpoint para tablet */
@@ -533,7 +540,8 @@ body {
     line-height: calc(1.172rem + 0.1875 * ((100vw - 640px) / 960));
   }
 
-  .text-25 {
+  .text-25,
+  .content-editor p {
     font-size: calc(1.015rem + 0.3125 * ((100vw - 640px) / 960));
     line-height: calc(1.422rem + 0.1875 * ((100vw - 640px) / 960));
   }
@@ -546,6 +554,11 @@ body {
   .text-50 {
     font-size: calc(2.03125rem + 0.3125 * ((100vw - 640px) / 960));
     line-height: calc(2.906rem + 0.375 * ((100vw - 640px) / 960));
+  }
+  .text-40,
+  .content-editor h2 {
+    font-size: calc(1.5rem + 0.3125 * ((100vw - 640px) / 960));
+    line-height: calc(2.25rem + 0.375 * ((100vw - 640px) / 960));
   }
 }
 
@@ -576,7 +589,8 @@ body {
     line-height: calc(1.172rem + 0.135 * ((100vw - 1024px) / 2816));
   }
 
-  .text-25 {
+  .text-25,
+  .content-editor p {
     font-size: calc(1.015rem + 0.125 * ((100vw - 1024px) / 2816));
     line-height: calc(1.422rem + 0.135 * ((100vw - 1024px) / 2816));
   }
@@ -589,6 +603,11 @@ body {
   .text-50 {
     font-size: calc(2.03125rem + 0.125 * ((100vw - 1024px) / 2816));
     line-height: calc(2.906rem + 0.135 * ((100vw - 1024px) / 2816));
+  }
+  .text-40,
+  .content-editor h2 {
+    font-size: calc(1.5rem + 0.125 * ((100vw - 1024px) / 2816));
+    line-height: calc(2.25rem + 0.135 * ((100vw - 1024px) / 2816));
   }
 }
 
@@ -619,7 +638,8 @@ body {
     line-height: calc(1.172rem + 0.135 * ((100vw - 1280px) / 3584));
   }
 
-  .text-25 {
+  .text-25,
+  .content-editor p {
     font-size: calc(1.015rem + 0.125 * ((100vw - 1280px) / 3584));
     line-height: calc(1.422rem + 0.135 * ((100vw - 1280px) / 3584));
   }
@@ -632,6 +652,11 @@ body {
   .text-50 {
     font-size: calc(2.03125rem + 0.125 * ((100vw - 1280px) / 3584));
     line-height: calc(2.906rem + 0.135 * ((100vw - 1280px) / 3584));
+  }
+  .text-40,
+  .content-editor h2 {
+    font-size: calc(1.5rem + 0.125 * ((100vw - 1280px) / 3584));
+    line-height: calc(2.25rem + 0.135 * ((100vw - 1280px) / 3584));
   }
 }
 
@@ -662,7 +687,8 @@ body {
     line-height: calc(1.172rem + 0.135 * ((100vw - 1440px) / 3840));
   }
 
-  .text-25 {
+  .text-25,
+  .content-editor p {
     font-size: calc(1.015rem + 0.125 * ((100vw - 1440px) / 3840));
     line-height: calc(1.422rem + 0.135 * ((100vw - 1440px) / 3840));
   }
@@ -675,6 +701,12 @@ body {
   .text-50 {
     font-size: calc(2.03125rem + 0.125 * ((100vw - 1440px) / 3840));
     line-height: calc(2.906rem + 0.135 * ((100vw - 1440px) / 3840));
+  }
+
+  .text-40,
+  .content-editor h2 {
+    font-size: calc(1.5rem + 0.125 * ((100vw - 1440px) / 3840));
+    line-height: calc(2.25rem + 0.135 * ((100vw - 1440px) / 3840));
   }
 }
 
@@ -704,7 +736,8 @@ body {
     line-height: 1.813rem;
   }
 
-  .text-25 {
+  .text-25,
+  .content-editor p {
     font-size: 1.563rem;
     line-height: 2.188rem;
   }
@@ -717,6 +750,11 @@ body {
   .text-50 {
     font-size: 3.125rem;
     line-height: 4.5rem;
+  }
+  .text-40,
+  .content-editor h2 {
+    font-size: 2.5rem;
+    line-height: 3.5625rem;
   }
 }
 
@@ -757,8 +795,8 @@ body {
 }
 
 .content-editor h2 {
-  font-size: 2.5rem;
-  line-height: 3.5625rem;
+  /* font-size: 2.5rem;
+  line-height: 3.5625rem; */
   margin-bottom: 1.5rem;
   color: #1f4690;
   font-family: "Gordita Bold";
@@ -775,8 +813,8 @@ body {
 }
 
 .content-editor p {
-  font-size: 1.5625rem;
-  line-height: 2.1875rem;
+  /* font-size: 1.5625rem;
+  line-height: 2.1875rem; */
   font-family: "Gordita Regular";
   color: #313131;
   margin-bottom: 1.5rem;
@@ -1141,4 +1179,8 @@ details[open] > summary::after {
 
 .page-header {
   transition: height ease 250ms;
+}
+
+.margin-b-0 {
+  margin-bottom: 0;
 }
