@@ -13,7 +13,10 @@ const masPlantillasSlider = () => {
         right: "13rem",
       },
       breakpoints: {
-        1024: {
+        1440: {
+          perPage: 4,
+        },
+        1240: {
           perPage: 3,
         },
         768: {

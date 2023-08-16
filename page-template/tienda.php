@@ -10,31 +10,37 @@ get_header();
         alt="<?php echo get_field("fondo_pagina_tienda")["alt"] ?>"
         width="<?php echo get_field("fondo_pagina_tienda")["width"] ?>"
         height="<?php echo get_field("fondo_pagina_tienda")["height"] ?>"
-        class="w-full h-full object-cover absolute left-0 top-0 z-[1]" />
-    <div class="container">
-        <div class="max-w-[85%] w-full min-h-[264px] py-12 flex items-center justify-start">
-            <h1 class="section-title section-title--xl section-title--white z-[2] relative text-white-150">
+        class="w-full h-full object-cover absolute left-0 top-0 z-[1] object-right" />
+    <div class="containerc">
+        <div
+            class="laptop:max-w-[85%] w-full min-h-[160px] py-4 tablet:min-h-[200px] laptop:min-h-[230px] desktop-large:min-h-[264px] laptop:py-12 flex items-center justify-start">
+            <h1 class="section-title section-title--white z-[2] relative text-white-150 margin-b-0">
                 <?php echo get_field("titulo_pagina_tienda") ?>
             </h1>
         </div>
     </div>
 </div>
-<div class="page-section  bg-white-150">
-    <div class="container">
-        <div class="grid grid-cols-2 gap-14">
-            <div class="flex flex-col gap-4">
+
+<div class="page-section bg-white-150">
+    <div class="containerc">
+        <div
+            class="grid grid-cols-1 gap-8 laptop:grid-cols-[450px_1fr] desktop-middle:grid-cols-2 desktop-middle:gap-14">
+            <div class="flex flex-col gap-8">
                 <div class="grid grid-cols-[1fr_auto] gap-3">
                     <div class="bg-[#313131] rounded-[10px] shadow-custom"></div>
                     <ul class="flex flex-col gap-3">
-                        <li class="w-[143px] h-[115px] bg-[#313131] rounded-[10px] shadow-custom"></li>
-                        <li class="w-[143px] h-[115px] bg-[#313131] rounded-[10px] shadow-custom"></li>
-                        <li class="w-[143px] h-[115px] bg-[#313131] rounded-[10px] shadow-custom"></li>
-                        <li class="w-[143px] h-[115px] bg-[#313131] rounded-[10px] shadow-custom"></li>
+                        <?php $i = 0;
+                        while ($i++ < 4): ?>
+                            <li
+                                class="w-[70px] h-[60px] tablet:w-[90px] tablet:h-[75px] desktop-middle:w-[100px] desktop-middle:h-[85px] desktop-large:w-[143px] desktop-large:h-[115px] bg-[#313131] rounded-[10px] shadow-custom">
+                            </li>
+                        <?php endwhile; ?>
                     </ul>
                 </div>
-                <ul class="flex gap-4 justify-center">
+                <ul class="flex gap-4 justify-center flex-wrap">
                     <li>
-                        <button class="button button--celeste button-rounded-sm"><svg xmlns="http://www.w3.org/2000/svg"
+                        <button class="button button--celeste button-rounded-sm"><svg
+                                class="w-[18px] laptop:w-[24px] desktop:w-[auto]" xmlns="http://www.w3.org/2000/svg"
                                 width="25.31" height="22.146" viewBox="0 0 25.31 22.146">
                                 <path id="collection_icon_160223"
                                     d="M22.937,21.064H2.373a.791.791,0,0,1-.791-.791V9.2a.791.791,0,0,1,.791-.791H22.937a.791.791,0,0,1,.791.791V20.273A.791.791,0,0,1,22.937,21.064ZM2.373,22.646A2.373,2.373,0,0,1,0,20.273V9.2A2.373,2.373,0,0,1,2.373,6.827H22.937A2.373,2.373,0,0,1,25.31,9.2V20.273a2.373,2.373,0,0,1-2.373,2.373ZM3.164,4.455a.791.791,0,0,0,.791.791h17.4a.791.791,0,0,0,0-1.582H3.955A.791.791,0,0,0,3.164,4.455ZM6.327,1.291a.791.791,0,0,0,.791.791H18.191a.791.791,0,0,0,0-1.582H7.118a.791.791,0,0,0-.791.791Z"
@@ -42,7 +48,8 @@ get_header();
                             </svg>Añadir a
                             colección</button>
                     </li>
-                    <li><button class="button button--celeste button-rounded-sm"><svg xmlns="http://www.w3.org/2000/svg"
+                    <li><button class="button button--celeste button-rounded-sm"><svg
+                                class="w-[18px] laptop:w-[24px] desktop:w-[auto]" xmlns="http://www.w3.org/2000/svg"
                                 width="25.2" height="21.371" viewBox="0 0 25.2 21.371">
                                 <g id="Layer_54" data-name="Layer 54" transform="translate(0 0)">
                                     <path id="Trazado_89" data-name="Trazado 89"
@@ -52,7 +59,8 @@ get_header();
                             </svg>
                             Favoritos</button></li>
                     <li>
-                        <button class="button button--celeste button-rounded-sm"><svg xmlns="http://www.w3.org/2000/svg"
+                        <button class="button button--celeste button-rounded-sm"><svg
+                                class="w-[18px] laptop:w-[24px] desktop:w-[auto]" xmlns="http://www.w3.org/2000/svg"
                                 width="19.727" height="21.371" viewBox="0 0 19.727 21.371">
                                 <g id="share-social-interface-button_icon-icons.com_73164" transform="translate(0 0)">
                                     <g id="_x35__27_" transform="translate(0 0)">
@@ -67,8 +75,10 @@ get_header();
                     </li>
                 </ul>
             </div>
-            <div class="max-w-[532px]">
-                <h1 class="font-gordita-bold text-30 text-blue mb-2">Nombre de la plantilla</h1>
+            <div class="mx-auto laptop:mx-[initial] max-w-[532px]">
+                <h1 class="font-gordita-bold text-30 text-blue mb-4 laptop:mb-2 text-center laptop:text-left">Nombre de
+                    la plantilla
+                </h1>
                 <p class="text-20 font-gordita-regular text-text-primary text-left mb-3">Descripción de la
                     plantilla Lorem
                     ipsum dolor
@@ -166,7 +176,7 @@ get_header();
     </div>
 </div>
 <section class="bg-[#D9D9D9] page-section page-section--sm">
-    <div class="container">
+    <div class="containerc">
         <h2 class="text-blue font-gordita-bold text-30 mb-10">Puede que también te interese</h2>
         <div class="splide custom-splide" role="group" aria-label="Splide Basic HTML Example"
             id="splide-mas-plantillas">
@@ -178,7 +188,7 @@ get_header();
                         ?>
                         <li class="splide__slide">
                             <div
-                                class="bg-[#313131] mx-[.3rem] mb-[.4rem] w-full h-[266px] relative rounded-[10px] shadow-custom">
+                                class="bg-[#313131] mx-[.3rem] mb-[.4rem] w-full h-[200px] laptop:h-[230px] desktop-large:h-[266px] relative rounded-[10px] shadow-custom">
                                 <div
                                     class="absolute bottom-0 left-0 w-full bg-white-150 flex justify-center px-4 py-4 rounded-[10px] shadow-custom">
                                     <div class="flex gap-4">

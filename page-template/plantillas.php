@@ -99,41 +99,57 @@ $terms = get_terms(
                                 <div class="modal__wrapper">
                                     <div class="modal__content">
                                         <div class="modal__close modal__close--celeste">x</div>
-                                        <div class="modal__body px-[72px] py-[71px]">
-                                            <div class="grid grid-cols-2 gap-[103px]">
+                                        <div
+                                            class="modal__body px-8 py-8 desktop-middle:px-14 desktop-middle:py-14 desktop-large:px-[72px] desktop-large:py-[71px]">
+                                            <div
+                                                class="grid grid-cols-1 tablet-middle:grid-cols-2 gap-4 tablet-middle:gap-8 desktop-middle:gap-20 desktop-large:gap-[103px]">
                                                 <div>
-                                                    <h2 class="font-gordita-bold text-blue text-30 mb-10">¿Quieres llevar la
+                                                    <h2
+                                                        class="font-gordita-bold text-blue text-30 mb-6 desktop-middle:mb-8 desktop-large:mb-10">
+                                                        ¿Quieres llevar la
                                                         eficiencia de
                                                         tu trabajo en SST al siguiente nivel?</h2>
-                                                    <p class="text-20 font-gordita-regular text-text-primary mb-8">Estamos
+                                                    <p
+                                                        class="text-20 font-gordita-regular text-text-primary mb-6 desktop-large:mb-8">
+                                                        Estamos
                                                         encantados de ofrecerles
                                                         plantillas gratuitas
                                                         descargables, como una
                                                         forma de complementar y facilitar su arduo trabajo diario.</p>
-                                                    <p class="text-20 font-gordita-regular text-text-primary mb-8">Sabemos lo
+                                                    <p
+                                                        class="text-20 font-gordita-regular text-text-primary mb-6 desktop-large:mb-8">
+                                                        Sabemos lo
                                                         importante que es para usted realizar una supervisión efectiva y
                                                         eficiente,
                                                         por lo que hemos diseñado estas plantillas con el objetivo de ahorrarte
                                                         tiempo y esfuerzo.</p>
-                                                    <p class="text-20 font-gordita-regular text-text-primary mb-8">Sólo debes
+                                                    <p
+                                                        class="text-20 font-gordita-regular text-text-primary mb-6 desktop-large:mb-8">
+                                                        Sólo debes
                                                         llenar el siguiente
                                                         formulario con tus datos
                                                         personales para poder mantenerte informado en materia de SST, nuevas
                                                         actualizaciones y sobre nuestros cursos que te ayudarán a enriquecer tus
                                                         conocimientos.</p>
-                                                    <p class="font-gordita-medium text-20 text-text-primary mb-8">¡Es un placer
+                                                    <p
+                                                        class="font-gordita-medium text-20 text-text-primary mb-6 desktop-large:mb-8">
+                                                        ¡Es un placer
                                                         tenerte
                                                         como parte de
                                                         nuestra comunidad de
                                                         profesionales comprometidos con la seguridad laboral!</p>
                                                     </p>
                                                 </div>
-                                                <div class="shadow-custom bg-[#D9D9D9] p-10 rounded-[10px]">
-                                                    <div class="bg-[#8E8E8E] rounded-[15px] h-[247px] mb-6 shadow-custom"></div>
+                                                <div
+                                                    class="shadow-custom bg-[#D9D9D9] p-4 laptop:p-6 desktop-middle:p-8 desktop-large:p-10 rounded-[10px]">
+                                                    <div
+                                                        class="bg-[#8E8E8E] rounded-[15px] h-[180px] desktop-large:h-[247px] mb-6 shadow-custom">
+                                                    </div>
                                                     <h2 class="font-gordita-bold text-20 text-blue mb-6">
                                                         <?php echo get_the_title(); ?>
                                                     </h2>
-                                                    <form action="" class="grid grid-rows-3 gap-4 modal-plantillas-form">
+                                                    <form action=""
+                                                        class="grid grid-rows-3 gap-4 modal-plantillas-form plantillas-form">
                                                         <input
                                                             class="px-6 py-3 w-full rounded-[10px] text-celeste-100 text-18 font-gordita-regular bg-white"
                                                             placeholder="Nombres y Apellidos" />

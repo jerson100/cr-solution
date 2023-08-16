@@ -883,11 +883,22 @@ body {
 .modal--lg {
   --w-modal: 1024px;
 }
+
+.modal--full,
 .modal--xl {
-  --w-modal: 1340px;
-}
-.modal--full {
   --w-modal: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+  .modal--xl {
+    --w-modal: 1024px;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .modal--xl {
+    --w-modal: 1340px;
+  }
 }
 
 .modal__content {
@@ -908,16 +919,40 @@ body {
   position: absolute;
   right: 0;
   top: 0;
-  width: 60px;
-  height: 60px;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
   transform: translate(50%, -50%);
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 30px;
+  font-size: 22px;
   cursor: pointer;
   font-family: "Gordita Bold";
+}
+
+@media screen and (min-width: 1024px) {
+  .modal__close {
+    width: 32px;
+    height: 32px;
+    font-size: 24px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .modal__close {
+    width: 40px;
+    height: 40px;
+    font-size: 26px;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .modal__close {
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+  }
 }
 
 .modal__close--celeste {
@@ -1188,4 +1223,8 @@ details[open] > summary::after {
 
 .margin-b-0 {
   margin-bottom: 0;
+}
+
+.plantillas-form input::placeholder {
+  font-size: inherit;
 }
