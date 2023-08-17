@@ -9,7 +9,7 @@
                         src="<?php echo IMG ?>/Inicio/1000.svg" alt="Logo de CR Solution" />
                 </div>
                 <div
-                    class="grid grid-cols-[1fr_auto_1fr_auto_1fr] place-items-center gap-4 tablet-middle:place-items-start font-gordita-regular">
+                    class="grid grid-cols-[1fr_auto_1fr_auto_1fr] place-items-center gap-4 tablet-middle:items-start font-gordita-regular">
                     <div class="flex flex-col gap-8 max-w-[220px] pr-4 col-span-5 tablet-middle:col-span-1">
                         <ul class="flex flex-col gap-4 w-full text-18 leading-[1.713rem] pt-4">
                             <li class="flex gap-4 items-start">

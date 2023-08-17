@@ -30,7 +30,7 @@ get_header();
 </style>
 
 <section class="datos_cliente screen-top h-screen-top">
-    <div class="container">
+    <div class="containerc">
         <div class="w-full">
             <div class="datos_cliente_box">
                 <div class="w-full">

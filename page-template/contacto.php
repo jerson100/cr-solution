@@ -93,6 +93,9 @@ get_header();
         </div>
     </div>
 </div>
-<div class="bg-black bg-opacity-20 h-[761px]"></div>
+<div class="bg-black bg-opacity-20 h-[380px] laptop:h-[450px] desktop-large:h-[761px] relative">
+    <img src="<?php echo IMG ?>/Contacto/mapa.jpg" alt="Localizaciòn de la empresa Cr Solutions"
+        title="Localizaciòn de la empresa Cr Solutions" class="object-cover w-full h-full top- left-0 absolute">
+</div>
 
 <?php get_footer(); ?>

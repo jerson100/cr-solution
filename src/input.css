@@ -433,7 +433,10 @@ body {
 }
 
 .text-22,
-.verification__description ul li {
+.verification__description ul li,
+.verification__description ol li,
+.content-editor-services p,
+.content-editor-services li {
   font-size: 0.875rem;
   line-height: 1.125rem;
 }
@@ -455,14 +458,45 @@ body {
 
 .text-25,
 .content-editor p,
-.button-size-md {
+.button-size-md,
+.content-editor-services details b,
+.content-editor-services details ul li,
+.verification__description {
   font-size: 1.015rem;
   line-height: 1.422rem;
 }
 
-.text-30 {
+.text-30,
+.content-editor-services h3,
+.content-editor-services summary {
   font-size: 1.21875rem;
   line-height: 1.732rem;
+}
+
+.text-32 {
+  font-size: 1.28125rem;
+  line-height: 1.732rem;
+}
+
+.text-33,
+.content-editor-services h2 {
+  font-size: 1.3125rem;
+  line-height: 1.732rem;
+}
+
+.text-34 {
+  font-size: 1.34375rem;
+  line-height: 1.732rem;
+}
+
+.text-35 {
+  font-size: 1.40625rem;
+  line-height: 1.732rem;
+}
+
+.text-38 {
+  font-size: 1.5rem;
+  line-height: 2.25rem;
 }
 
 .text-50 {
@@ -473,6 +507,11 @@ body {
 .text-57 {
   font-size: 1.6rem;
   line-height: 2.33rem;
+}
+
+.text-70 {
+  font-size: 2.8125rem;
+  line-height: 3.75rem;
 }
 
 .text-40,
@@ -529,7 +568,10 @@ body {
   }
 
   .text-22,
-  .verification__description ul li {
+  .verification__description ul li,
+  .verification__description ol li,
+  .content-editor-services p,
+  .content-editor-services li {
     font-size: calc(0.875rem + 0.25 * ((100vw - 640px) / 960));
     line-height: calc(1.125rem + 0.125 * ((100vw - 640px) / 960));
   }
@@ -551,13 +593,39 @@ body {
 
   .text-25,
   .content-editor p,
-  .button-size-md {
+  .button-size-md,
+  .content-editor-services details b,
+  .content-editor-services details ul li,
+  .verification__description {
     font-size: calc(1.015rem + 0.3125 * ((100vw - 640px) / 960));
     line-height: calc(1.422rem + 0.1875 * ((100vw - 640px) / 960));
   }
 
-  .text-30 {
+  .text-30,
+  .content-editor-services h3,
+  .content-editor-services summary {
     font-size: calc(1.21875rem + 0.3125 * ((100vw - 640px) / 960));
+    line-height: calc(1.732rem + 0.1875 * ((100vw - 640px) / 960));
+  }
+
+  .text-33,
+  .content-editor-services h2 {
+    font-size: calc(1.3125rem + 0.3125 * ((100vw - 640px) / 960));
+    line-height: calc(1.732rem + 0.1875 * ((100vw - 640px) / 960));
+  }
+
+  .text-34 {
+    font-size: calc(1.34375rem + 0.3125 * ((100vw - 640px) / 960));
+    line-height: calc(1.732rem + 0.1875 * ((100vw - 640px) / 960));
+  }
+
+  .text-35 {
+    font-size: calc(1.375rem + 0.3125 * ((100vw - 640px) / 960));
+    line-height: calc(1.732rem + 0.1875 * ((100vw - 640px) / 960));
+  }
+
+  .text-38 {
+    font-size: calc(1.4375rem + 0.3125 * ((100vw - 640px) / 960));
     line-height: calc(1.732rem + 0.1875 * ((100vw - 640px) / 960));
   }
 
@@ -570,6 +638,10 @@ body {
     font-size: calc(1.5rem + 0.3125 * ((100vw - 640px) / 960));
     line-height: calc(2.25rem + 0.375 * ((100vw - 640px) / 960));
   }
+  .text-70 {
+    font-size: calc(2.8125rem + 0.3125 * ((100vw - 640px) / 960));
+    line-height: calc(3.75rem + 0.375 * ((100vw - 640px) / 960));
+  }
 }
 
 /* Breakpoint para laptop */
@@ -580,7 +652,10 @@ body {
   }
 
   .text-22,
-  .verification__description ul li {
+  .verification__description ul li,
+  .verification__description ol li,
+  .content-editor-services p,
+  .content-editor-services li {
     font-size: calc(0.875rem + 0.175 * ((100vw - 1024px) / 2816));
     line-height: calc(1.125rem + 0.1125 * ((100vw - 1024px) / 2816));
   }
@@ -602,13 +677,39 @@ body {
 
   .text-25,
   .content-editor p,
-  .button-size-md {
+  .button-size-md,
+  .content-editor-services details b,
+  .content-editor-services details ul li,
+  .verification__description {
     font-size: calc(1.015rem + 0.125 * ((100vw - 1024px) / 2816));
     line-height: calc(1.422rem + 0.135 * ((100vw - 1024px) / 2816));
   }
 
-  .text-30 {
+  .text-30,
+  .content-editor-services h3,
+  .content-editor-services summary {
     font-size: calc(1.21875rem + 0.125 * ((100vw - 1024px) / 2816));
+    line-height: calc(1.732rem + 0.135 * ((100vw - 1024px) / 2816));
+  }
+
+  .text-33,
+  .content-editor-services h2 {
+    font-size: calc(1.3125rem + 0.125 * ((100vw - 1024px) / 2816));
+    line-height: calc(1.732rem + 0.135 * ((100vw - 1024px) / 2816));
+  }
+
+  .text-34 {
+    font-size: calc(1.34375rem + 0.125 * ((100vw - 1024px) / 2816));
+    line-height: calc(1.732rem + 0.135 * ((100vw - 1024px) / 2816));
+  }
+
+  .text-35 {
+    font-size: calc(1.375rem + 0.125 * ((100vw - 1024px) / 2816));
+    line-height: calc(1.732rem + 0.135 * ((100vw - 1024px) / 2816));
+  }
+
+  .txt-38 {
+    font-size: calc(1.4375rem + 0.125 * ((100vw - 1024px) / 2816));
     line-height: calc(1.732rem + 0.135 * ((100vw - 1024px) / 2816));
   }
 
@@ -621,6 +722,10 @@ body {
     font-size: calc(1.5rem + 0.125 * ((100vw - 1024px) / 2816));
     line-height: calc(2.25rem + 0.135 * ((100vw - 1024px) / 2816));
   }
+  .text-70 {
+    font-size: calc(2.8125rem + 0.125 * ((100vw - 1024px) / 2816));
+    line-height: calc(3.75rem + 0.135 * ((100vw - 1024px) / 2816));
+  }
 }
 
 /* Breakpoint para desktop */
@@ -631,7 +736,10 @@ body {
   }
 
   .text-22,
-  .verification__description ul li {
+  .verification__description ul li,
+  .verification__description ol li,
+  .content-editor-services p,
+  .content-editor-services li {
     font-size: calc(0.875rem + 0.175 * ((100vw - 1280px) / 3584));
     line-height: calc(1.125rem + 0.1125 * ((100vw - 1280px) / 3584));
   }
@@ -653,13 +761,39 @@ body {
 
   .text-25,
   .content-editor p,
-  .button-size-md {
+  .button-size-md,
+  .content-editor-services details b,
+  .content-editor-services details ul li,
+  .verification__description {
     font-size: calc(1.015rem + 0.125 * ((100vw - 1280px) / 3584));
     line-height: calc(1.422rem + 0.135 * ((100vw - 1280px) / 3584));
   }
 
-  .text-30 {
+  .text-30,
+  .content-editor-services h3,
+  .content-editor-services summary {
     font-size: calc(1.21875rem + 0.125 * ((100vw - 1280px) / 3584));
+    line-height: calc(1.732rem + 0.135 * ((100vw - 1280px) / 3584));
+  }
+
+  .text-33,
+  .content-editor-services h2 {
+    font-size: calc(1.3125rem + 0.125 * ((100vw - 1280px) / 3584));
+    line-height: calc(1.732rem + 0.135 * ((100vw - 1280px) / 3584));
+  }
+
+  .text-34 {
+    font-size: calc(1.34375rem + 0.125 * ((100vw - 1280px) / 3584));
+    line-height: calc(1.732rem + 0.135 * ((100vw - 1280px) / 3584));
+  }
+
+  .text-35 {
+    font-size: calc(1.375rem + 0.125 * ((100vw - 1280px) / 3584));
+    line-height: calc(1.732rem + 0.135 * ((100vw - 1280px) / 3584));
+  }
+
+  .text-38 {
+    font-size: calc(1.4375rem + 0.125 * ((100vw - 1280px) / 3584));
     line-height: calc(1.732rem + 0.135 * ((100vw - 1280px) / 3584));
   }
 
@@ -672,6 +806,10 @@ body {
     font-size: calc(1.5rem + 0.125 * ((100vw - 1280px) / 3584));
     line-height: calc(2.25rem + 0.135 * ((100vw - 1280px) / 3584));
   }
+  .text-70 {
+    font-size: calc(2.8125rem + 0.125 * ((100vw - 1280px) / 3584));
+    line-height: calc(3.75rem + 0.135 * ((100vw - 1280px) / 3584));
+  }
 }
 
 /* Breakpoint para desktop middle */
@@ -682,7 +820,10 @@ body {
   }
 
   .text-22,
-  .verification__description ul li {
+  .verification__description ul li,
+  .verification__description ol li,
+  .content-editor-services p,
+  .content-editor-services li {
     font-size: calc(0.875rem + 0.175 * ((100vw - 1440px) / 3840));
     line-height: calc(1.125rem + 0.1125 * ((100vw - 1440px) / 3840));
   }
@@ -704,13 +845,39 @@ body {
 
   .text-25,
   .content-editor p,
-  .button-size-md {
+  .button-size-md,
+  .content-editor-services details b,
+  .content-editor-services details ul li,
+  .verification__description {
     font-size: calc(1.015rem + 0.125 * ((100vw - 1440px) / 3840));
     line-height: calc(1.422rem + 0.135 * ((100vw - 1440px) / 3840));
   }
 
-  .text-30 {
+  .text-30,
+  .content-editor-services h3,
+  .content-editor-services summary {
     font-size: calc(1.21875rem + 0.125 * ((100vw - 1440px) / 3840));
+    line-height: calc(1.732rem + 0.135 * ((100vw - 1440px) / 3840));
+  }
+
+  .text-33,
+  .content-editor-services h2 {
+    font-size: calc(1.3125rem + 0.125 * ((100vw - 1440px) / 3840));
+    line-height: calc(1.732rem + 0.135 * ((100vw - 1440px) / 3840));
+  }
+
+  .text-34 {
+    font-size: calc(1.34375rem + 0.125 * ((100vw - 1440px) / 3840));
+    line-height: calc(1.732rem + 0.135 * ((100vw - 1440px) / 3840));
+  }
+
+  .text-35 {
+    font-size: calc(1.375rem + 0.125 * ((100vw - 1440px) / 3840));
+    line-height: calc(1.732rem + 0.135 * ((100vw - 1440px) / 3840));
+  }
+
+  .text-38 {
+    font-size: calc(1.4375rem + 0.125 * ((100vw - 1440px) / 3840));
     line-height: calc(1.732rem + 0.135 * ((100vw - 1440px) / 3840));
   }
 
@@ -724,6 +891,10 @@ body {
     font-size: calc(1.5rem + 0.125 * ((100vw - 1440px) / 3840));
     line-height: calc(2.25rem + 0.135 * ((100vw - 1440px) / 3840));
   }
+  .text-70 {
+    font-size: calc(2.8125rem + 0.125 * ((100vw - 1440px) / 3840));
+    line-height: calc(3.75rem + 0.135 * ((100vw - 1440px) / 3840));
+  }
 }
 
 @media screen and (min-width: 1600px) {
@@ -733,7 +904,10 @@ body {
   }
 
   .text-22,
-  .verification__description ul li {
+  .verification__description ul li,
+  .verification__description ol li,
+  .content-editor-services p,
+  .content-editor-services li {
     font-size: 1.375rem;
     line-height: 1.75rem;
   }
@@ -755,13 +929,39 @@ body {
 
   .text-25,
   .content-editor p,
-  .button-size-md {
+  .button-size-md,
+  .content-editor-services details b,
+  .content-editor-services details ul li,
+  .verification__description {
     font-size: 1.563rem;
     line-height: 2.188rem;
   }
 
-  .text-30 {
+  .text-30,
+  .content-editor-services h3,
+  .content-editor-services summary {
     font-size: 1.875rem;
+    line-height: 2.688rem;
+  }
+
+  .text-33,
+  .content-editor-services h2 {
+    font-size: 2.063rem;
+    line-height: 2.188rem;
+  }
+
+  .text-34 {
+    font-size: 2.0625rem;
+    line-height: 2.688rem;
+  }
+
+  .text-35 {
+    font-size: 2.125rem;
+    line-height: 2.688rem;
+  }
+
+  .text-38 {
+    font-size: 2.375rem;
     line-height: 2.688rem;
   }
 
@@ -773,6 +973,10 @@ body {
   .content-editor h2 {
     font-size: 2.5rem;
     line-height: 3.5625rem;
+  }
+  .text-70 {
+    font-size: 4.375rem;
+    line-height: 5.625rem;
   }
 }
 
@@ -864,10 +1068,7 @@ body {
   display: flex;
 }
 .modal__wrapper {
-  padding-left: 2rem;
-  padding-right: 2rem;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding: 1rem;
   width: 100%;
   margin: auto;
   position: relative;
@@ -893,6 +1094,12 @@ body {
 .modal--full,
 .modal--xl {
   --w-modal: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .modal__wrapper {
+    padding: 2rem;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -1117,7 +1324,7 @@ header li:hover > ul {
 
 .verification__description {
   font-family: "Gordita Regular";
-  font-size: 25px;
+  /* font-size: 25px; */
   color: #ffffff;
 }
 
@@ -1139,16 +1346,16 @@ header li:hover > ul {
 
 .content-editor-services h2 {
   color: #0097b2;
-  font-size: 2.063rem;
-  line-height: 2.188rem;
+  /*font-size: 2.063rem;
+  line-height: 2.188rem;*/
   font-family: "Gordita Bold";
   margin-bottom: 1.6rem;
 }
 
 .content-editor-services h3 {
   color: #1f4690;
-  font-size: 1.75rem;
-  line-height: 2.5rem;
+  /* font-size: 1.75rem;
+  line-height: 2.5rem; */
   font-family: "Gordita Bold";
   margin-bottom: 1.6rem;
 }
@@ -1156,16 +1363,16 @@ header li:hover > ul {
 .content-editor-services p {
   color: #313131;
   font-family: "Gordita Regular";
-  font-size: 1.463rem;
-  line-height: 2.188rem;
+  /* font-size: 1.463rem;
+  line-height: 2.188rem; */
   margin-bottom: 1.3rem;
 }
 
 .content-editor-services summary {
   color: #0097b2;
   font-family: "Gordita Bold";
-  font-size: 1.875rem;
-  line-height: 2.688rem;
+  /* font-size: 1.875rem;
+  line-height: 2.688rem; */
   margin-bottom: 1rem;
 }
 
@@ -1176,17 +1383,37 @@ header li:hover > ul {
 
 .content-editor-services summary::after {
   content: "\002B"; /* Código Unicode para la flecha hacia la derecha */
-  font-size: 30px;
+  font-size: 22px;
   margin-right: 5px;
   vertical-align: middle;
 }
 
 .content-editor-services summary summary::after {
-  font-size: 24px;
+  font-size: 17px;
 }
 
 details[open] > summary::after {
   content: "\2212"; /* Código Unicode para la flecha hacia abajo */
+}
+
+@media screen and (min-width: 1024px) {
+  .content-editor-services summary::after {
+    font-size: 25px;
+  }
+
+  .content-editor-services summary summary::after {
+    font-size: 19px;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .content-editor-services summary::after {
+    font-size: 30px;
+  }
+
+  .content-editor-services summary summary::after {
+    font-size: 24px;
+  }
 }
 
 /* Estilos adicionales para resaltar el elemento summary */
@@ -1202,15 +1429,15 @@ details[open] > summary::after {
 
 .content-editor-services details b {
   color: #1f4690;
-  font-size: 1.563rem;
-  line-height: 2.188rem;
+  /* font-size: 1.563rem;
+  line-height: 2.188rem; */
   font-family: "Gordita Regular";
 }
 
 .content-editor-services details ul li {
   color: #313131;
-  font-size: 1.563rem;
-  line-height: 2.188rem;
+  /* font-size: 1.563rem;
+  line-height: 2.188rem; */
   font-family: "Gordita Regular";
 }
 

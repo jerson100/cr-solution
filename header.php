@@ -38,9 +38,10 @@
             <div class="flex items-center justify-between h-full">
                 <div class="flex items-center h-full">
                     <!-- <div class="h-[95px] bg-blue-600 w-[200px]"></div> -->
-                    <!-- <a href="<?php echo esc_url(home_url('/')) ?>"> -->
-                    <img src="<?php echo IMG ?>/Inicio/LOGOC&R.svg" alt="Logo de Web CR Solutions"
-                        class="w-auto h-full" />
+                    <a href="<?php echo esc_url(home_url('/')) ?>" class="inline-block w-auto h-full">
+                        <img src="<?php echo IMG ?>/Inicio/LOGOC&R.svg" alt="Logo de Web CR Solutions"
+                            class="w-auto h-full" />
+                    </a>
                     <!-- </a> -->
                 </div>
                 <div class="h-full">

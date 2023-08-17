@@ -14,7 +14,7 @@ import { sliderBajoEstandares } from "./utils/footer";
 
 (() => {
   window.addEventListener("DOMContentLoaded", () => {
-    onHeightAnimation(300);
+    onHeightAnimation(200);
     sliderBajoEstandares();
     onHandleModals();
     mainPage();
