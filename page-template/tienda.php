@@ -40,8 +40,9 @@ get_header();
                 <ul class="flex gap-4 justify-center flex-wrap">
                     <li>
                         <button class="button button--celeste button-rounded-sm"><svg
-                                class="w-[18px] laptop:w-[24px] desktop:w-[auto]" xmlns="http://www.w3.org/2000/svg"
-                                width="25.31" height="22.146" viewBox="0 0 25.31 22.146">
+                                class="w-[18px] desktop-middle:w-[24px] desktop-large:w-[auto]"
+                                xmlns="http://www.w3.org/2000/svg" width="25.31" height="22.146"
+                                viewBox="0 0 25.31 22.146">
                                 <path id="collection_icon_160223"
                                     d="M22.937,21.064H2.373a.791.791,0,0,1-.791-.791V9.2a.791.791,0,0,1,.791-.791H22.937a.791.791,0,0,1,.791.791V20.273A.791.791,0,0,1,22.937,21.064ZM2.373,22.646A2.373,2.373,0,0,1,0,20.273V9.2A2.373,2.373,0,0,1,2.373,6.827H22.937A2.373,2.373,0,0,1,25.31,9.2V20.273a2.373,2.373,0,0,1-2.373,2.373ZM3.164,4.455a.791.791,0,0,0,.791.791h17.4a.791.791,0,0,0,0-1.582H3.955A.791.791,0,0,0,3.164,4.455ZM6.327,1.291a.791.791,0,0,0,.791.791H18.191a.791.791,0,0,0,0-1.582H7.118a.791.791,0,0,0-.791.791Z"
                                     transform="translate(0 -0.5)" fill="#fff" fill-rule="evenodd" />
@@ -49,8 +50,9 @@ get_header();
                             colección</button>
                     </li>
                     <li><button class="button button--celeste button-rounded-sm"><svg
-                                class="w-[18px] laptop:w-[24px] desktop:w-[auto]" xmlns="http://www.w3.org/2000/svg"
-                                width="25.2" height="21.371" viewBox="0 0 25.2 21.371">
+                                class="w-[18px] desktop-middle:w-[24px] desktop-large:w-[auto]"
+                                xmlns="http://www.w3.org/2000/svg" width="25.2" height="21.371"
+                                viewBox="0 0 25.2 21.371">
                                 <g id="Layer_54" data-name="Layer 54" transform="translate(0 0)">
                                     <path id="Trazado_89" data-name="Trazado 89"
                                         d="M13.613,24.66a2.521,2.521,0,0,1-1.79-.74L3.168,15.265A7.328,7.328,0,0,1,1.05,10.013,6.773,6.773,0,0,1,7.89,3.29,6.773,6.773,0,0,1,12.773,5.3l.84.84L14.3,5.45h0A7.051,7.051,0,0,1,23.546,4.7a6.933,6.933,0,0,1,.681,10.387L15.4,23.921a2.521,2.521,0,0,1-1.79.74ZM7.857,4.962a5.143,5.143,0,0,0-3.58,1.445,5.042,5.042,0,0,0-1.546,3.639A5.647,5.647,0,0,0,4.369,14.08l8.656,8.656a.84.84,0,0,0,1.193,0L23.05,13.9a5.252,5.252,0,0,0,1.487-4.034A5.193,5.193,0,0,0,22.5,6.038a5.353,5.353,0,0,0-7.034.6L14.21,7.92a.84.84,0,0,1-1.193,0L11.588,6.492a5.277,5.277,0,0,0-3.7-1.529Z"
@@ -60,8 +62,9 @@ get_header();
                             Favoritos</button></li>
                     <li>
                         <button class="button button--celeste button-rounded-sm"><svg
-                                class="w-[18px] laptop:w-[24px] desktop:w-[auto]" xmlns="http://www.w3.org/2000/svg"
-                                width="19.727" height="21.371" viewBox="0 0 19.727 21.371">
+                                class="w-[18px] desktop-middle: desktop-large:w-[auto]"
+                                xmlns="http://www.w3.org/2000/svg" width="19.727" height="21.371"
+                                viewBox="0 0 19.727 21.371">
                                 <g id="share-social-interface-button_icon-icons.com_73164" transform="translate(0 0)">
                                     <g id="_x35__27_" transform="translate(0 0)">
                                         <g id="Grupo_57" data-name="Grupo 57">

@@ -142,7 +142,7 @@ $wp_query = new WP_Query(
     <section class="page-section bg-[#F2F2F2] wow animate__animated animate__fadeIn" data-wow-duration="1s">
         <div class="containerc">
             <div class="flex flex-col gap-8">
-                <div class="max-w-[1088px] w-full mx-auto text-center mb-8">
+                <div class="max-w-[700px] max-w-[1088px] w-full mx-auto text-center mb-8">
                     <?php if (!empty(get_field("titulo_ser"))) : ?>
                     <h2 class="section-title"><?php echo get_field('titulo_ser') ?></h2>
                     <?php endif; ?>
@@ -164,7 +164,7 @@ $wp_query = new WP_Query(
                             <?php while (have_posts()):
                                 the_post(); ?>
                                 <li
-                                    class="splide__slide [&>div>div>p]:text-[20px] [&>article]:h-[300px] desktop:[&>article]:h-[364px] [&>article>img]:h-full [&>article>img]:w-full [&>article>img]:object-cover [&>article>img]:object-top [&>article]:rounded-xl [&>article]:overflow-hidden [&>article]:shadow-custom [&>article>div]:absolute [&>article>div]:bottom-0 [&>article]:relative">
+                                    class="splide__slide [&>article]:h-[300px] desktop:[&>article]:h-[364px] [&>article>img]:h-full [&>article>img]:w-full [&>article>img]:object-cover [&>article>img]:object-top [&>article]:rounded-xl [&>article]:overflow-hidden [&>article]:shadow-custom [&>article>div]:absolute [&>article>div]:bottom-0 [&>article]:relative">
                                     <article class="flex flex-col services__item">
                                         <?php
                                         $thumbID = get_post_thumbnail_id($post->ID);
@@ -183,7 +183,7 @@ $wp_query = new WP_Query(
                                                     </h3>
                                                 </div>
                                                 <div class="hidden services__description justify-center">
-                                                    <p class="text-white text-center mt-4 line-clamp-6">
+                                                    <p class="text-white text-center mt-4 line-clamp-6 text-20">
                                                         <?php the_excerpt(); ?>
                                                     </p>
                                                     <div class="flex justify-center">

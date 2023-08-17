@@ -107,7 +107,13 @@ body {
 }
 
 .services__item:hover .services__content {
-  height: 364px;
+  height: 300px;
+}
+
+@media screen and (min-width: 1280px) {
+  .services__item:hover .services__content {
+    height: 364px;
+  }
 }
 
 .services__item h3 {
@@ -1096,7 +1102,13 @@ header li:hover > ul {
     Pagina de servicios
 */
 .services_list li:nth-child(1) {
-  grid-column: 2 / span 2;
+  grid-column: initial;
+}
+
+@media screen and (min-width: 768px) {
+  .services_list li:nth-child(1) {
+    grid-column: 2 / span 2;
+  }
 }
 
 .custom-splide .splide__arrows button svg {

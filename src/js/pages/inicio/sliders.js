@@ -102,7 +102,7 @@ const capacitacionesDestacadasSlider = () => {
           right: "2rem",
         },
       },
-      1024: {
+      1023: {
         perPage: 2,
         gap: "2rem",
         padding: {

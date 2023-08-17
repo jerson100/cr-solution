@@ -93,7 +93,7 @@ $terms = get_terms(
                                 <div class="modal__wrapper">
                                     <div class="modal__content">
                                         <div class="modal__close modal__close--celeste">x</div>
-                                        <div class="modal__body px-8 py-8 desktop-middle:px-14 desktop-middle:py-14 desktop-large:px-[72px] desktop-large:py-[71px]">
+                                        <div class="modal__body px-4 py-4 laptop:px-8 laptop:py-8 desktop-middle:px-14 desktop-middle:py-14 desktop-large:px-[72px] desktop-large:py-[71px]">
                                             <div class="grid grid-cols-1 tablet-middle:grid-cols-2 gap-4 tablet-middle:gap-8 desktop-middle:gap-20 desktop-large:gap-[103px]">
                                                 <div>
                                                     <h2 class="font-gordita-bold text-blue text-30 mb-6 desktop-middle:mb-8 desktop-large:mb-10">¿Quieres llevar la
